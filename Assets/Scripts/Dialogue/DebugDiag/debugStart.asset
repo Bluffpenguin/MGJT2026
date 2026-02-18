@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: debugStart
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Bob
-  text: This is a test for the dialogue system
+  text: This is a test for the <color=red>dialogue</color> system
   choices:
   - next: {fileID: 11400000, guid: b033b38495aa59648a3258b8a3e43739, type: 2}
     choiceText: Abe
@@ -25,6 +25,5 @@ MonoBehaviour:
     choiceText: Cain
     prerequisite: Bird
   next: {fileID: 0}
-  endEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  wordUnlock: 
+  transformation: 

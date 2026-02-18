@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: 
   text: Oh that's wonderful to hear. I've grown so many, they're starting to rot
-    in my garden... it's attracting a lot of flies.
+    in my garden... it's attracting a lot of <color=red>flies</color>.
   choices:
   - next: {fileID: 11400000, guid: 8238da6206224d3489ad951fe8ad4ed4, type: 2}
     choiceText: More ideas?

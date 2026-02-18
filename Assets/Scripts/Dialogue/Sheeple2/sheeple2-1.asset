@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple2-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: 
+  speakerName: Sheeple
   text: Bet. As if you could transform into something useful!
   choices:
-  - next: {fileID: 0}
-    choiceText: A frog
-    prerequisite: 
-  - next: {fileID: 0}
-    choiceText: Apathy
-    prerequisite: 
-  - next: {fileID: 0}
-    choiceText: Brakes
-    prerequisite: 
-  - next: {fileID: 0}
-    choiceText: A hammer
-    prerequisite: 
+  - next: {fileID: 11400000, guid: f1e00d08c6c1aa54db08eb5b2beda7c4, type: 2}
+    choiceText: A <color=red>frog</color>
+    prerequisite: frog
+  - next: {fileID: 11400000, guid: fa716945df8c5bb41a6597292486a5af, type: 2}
+    choiceText: <color=red>Apathy</color>
+    prerequisite: apathy
+  - next: {fileID: 11400000, guid: b46d23a943282f048bfb67df2267470c, type: 2}
+    choiceText: <color=red>Brakes</color>
+    prerequisite: brakes
+  - next: {fileID: 11400000, guid: de30168c5466c5f48b1052f80f2cf2a9, type: 2}
+    choiceText: A <color=red>hammer</color>
+    prerequisite: hammer
   next: {fileID: 0}
   wordUnlock: 
   transformation: 

@@ -8,5 +8,5 @@ static public class EventManager
     static public UnityEvent CloseDialogueBox = new();
 
     // Dialogue Choices
-    static public UnityEvent test = new();
+    static public UnityEvent<string> transformation = new();
 }

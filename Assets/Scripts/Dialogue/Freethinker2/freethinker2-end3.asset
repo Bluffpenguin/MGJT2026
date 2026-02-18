@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: freethinker2-end3
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: To eat bugs...? Heh, I've never thought of it that way... Maybe frogs are
-    onto something...
+  text: To eat bugs...? Heh, I've never thought of it that way... Maybe <color=red>frogs</color>
+    are onto something...
   choices: []
   next: {fileID: 0}
   wordUnlock: frog
