@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     {
         Vector2 move = MoveAction.ReadValue<Vector2>();
         Debug.Log(move);
-        Vector2 position = (Vector2)transform.position + move * 0.5f;
+        Vector2 position = (Vector2)transform.position + move * 0.04f;
         transform.position = position;
 
     }
