@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: freethinker6-113
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: Freethinker
+  text: I think thou art correct. It is a somewhat dull answer, unfortunately.
+  choices:
+  - next: {fileID: 11400000, guid: e1ef778a25c93f04998674ee38590702, type: 2}
+    choiceText: Life is often dull.
+    prerequisite: 
+  - next: {fileID: 0}
+    choiceText: Come on, dude.
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 

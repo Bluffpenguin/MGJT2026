@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: player2s-apathy
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: 
-  text: 
+  speakerName: Rico
+  text: I'll transform into apathy!
   choices: []
   next: {fileID: 0}
   wordUnlock: 
-  transformation: 
+  transformation: apathy

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: freeThinker1-11
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: 
-  text: Things that fly? My favorite example is the airplane. What incredible feats
-    of engineering!
+  text: Things that fly? My favorite example is the <color=red>airplane</color>.
+    What incredible feats of engineering!
   choices:
   - next: {fileID: 11400000, guid: 4f913a253dcb54442aed3d3c9a3a3633, type: 2}
     choiceText: Thanks, bye.
