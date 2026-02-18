@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: freeThinker1-2
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: 
+  text: You should really try it sometime. I've grown so many, they're starting to
+    rot in my garden... it's attracting a lot of flies.
+  choices:
+  - next: {fileID: 11400000, guid: 8238da6206224d3489ad951fe8ad4ed4, type: 2}
+    choiceText: More ideas?
+    prerequisite: 
+  - next: {fileID: 11400000, guid: 4f913a253dcb54442aed3d3c9a3a3633, type: 2}
+    choiceText: Bye.
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: fly
+  transformation: 
