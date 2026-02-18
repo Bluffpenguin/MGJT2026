@@ -1014,6 +1014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9173854983230950333}
   - component: {fileID: 2312710153008191181}
+  - component: {fileID: 5739077971388799031}
   m_Layer: 0
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -1059,6 +1060,20 @@ MonoBehaviour:
   TEXT_SPEED: 0.1
   currentDialogue: {fileID: 0}
   debugMessage: {fileID: 11400000, guid: 2ffa06a536f283647bbd1f69edcb9e01, type: 2}
+--- !u!114 &5739077971388799031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7604392514784478028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fc558d75aaf0e41b1fa733a93bbfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  words:
+  - Fly
 --- !u!1 &7742785813282662914
 GameObject:
   m_ObjectHideFlags: 0
