@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class KeywordLibrary : MonoBehaviour 
 {
     public static KeywordLibrary instance;
+
+	static public UnityEvent<string> LearnWord = new(); // Unlock a word
 
 	Dictionary<string, bool> Keywords = new();
 	[SerializeField] string[] words;
@@ -17,6 +20,8 @@ public class KeywordLibrary : MonoBehaviour
 		{
 			Keywords.Add(word, false);
 		}
+
+		LearnWord.AddListener(Learn);
 	}
 
 	// Return whether or not the words has been found
@@ -26,9 +31,9 @@ public class KeywordLibrary : MonoBehaviour
 	}
 
 	//Set the provided word to True/False
-	public void Set(string keyword, bool value)
+	public void Learn(string keyword)
 	{
-		Keywords[keyword] = value;
+		Keywords[keyword] = true;
 	}
 
 	// The all words to False

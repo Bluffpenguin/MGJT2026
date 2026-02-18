@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d2c7579e39c6e62409f82c459ca97ec2
+guid: 2e6e44c7a88936f49a52dca5aff6f996
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Swirly Canalope PERSONAL USE
+  - kindergarten
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
