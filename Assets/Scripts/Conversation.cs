@@ -30,11 +30,4 @@ public class Conversation : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (triggerActive)
-        {
-            Instantiate(myPrefab);
-        }
-    }
 }
