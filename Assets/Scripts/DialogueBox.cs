@@ -95,7 +95,15 @@ public class DialogueBox : MonoBehaviour
 
     void CloseMenu()
     {
-        opened = false;
+        StopAllCoroutines();
+
+		// Check for transformations
+		if (currentDialogue.transformation != "")
+		{
+            EventManager.transformation.Invoke(currentDialogue.transformation);
+		}
+
+		opened = false;
         dialoguePanel.SetActive(false);
 		foreach (var choice in choiceButtons)
 		{
@@ -172,8 +180,16 @@ public class DialogueBox : MonoBehaviour
             choice.gameObject.SetActive(false);
         }
 
-        currentDialogue = currentDialogue.choices[index].next;
-        PopulateText();
+        if (currentDialogue.choices[index].next != null)
+        {
+			currentDialogue = currentDialogue.choices[index].next;
+			PopulateText();
+		}
+        else
+        {
+            CloseMenu();
+        }
+        
     }
 
 	void StartDialogue(string dialogue)
@@ -186,12 +202,6 @@ public class DialogueBox : MonoBehaviour
 
     void CheckDialogueEvents()
     {
-        // Check for transformations
-        if (currentDialogue.transformation != "")
-        {
-
-        }
-
         // Check for word gain
         if (currentDialogue.wordUnlock != "")
         {
@@ -202,10 +212,25 @@ public class DialogueBox : MonoBehaviour
 	IEnumerator TypeLine(string dialogue)
 	{
 		finishedDialogue = false;
+        bool printingHtmlfunc = false;
 		foreach (char c in dialogue.ToCharArray())
 		{
-			textBox.text += c;
-			yield return new WaitForSeconds(textSpeed);
+
+            textBox.text += c;
+
+            //Check for HTML functions
+			if (c == '<')
+			{
+                printingHtmlfunc = true;
+			}
+
+            if (c == '>')
+            {
+                printingHtmlfunc = false;
+            }
+
+            // Don't space html functions
+			if (!printingHtmlfunc) yield return new WaitForSeconds(textSpeed);
 		}
 		if (AudioManager.instance) AudioManager.instance.TW_Stop();
 		yield return new WaitForSeconds(0.5f);

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker3-Start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: 
-  text: 
+  speakerName: Freethinker
+  text: 'HELLO. I''M KIND OF BUSY RIGHT NOW.
+
+    I''M THE ONLY PERSON DOING ANY
+    WORK AROUND HERE.'
   choices:
   - next: {fileID: 11400000, guid: f2ea156ddeacddb45a2841f04e5b1414, type: 2}
     choiceText: What are you doing?

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker2-2-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: 
-  text: Break something...? Most often, connections are broken by sheer apathy...
+  text: Break something...? Most often, connections are broken by sheer <color=red>apathy</color>...
     It's that simple, really.
   choices: []
   next: {fileID: 0}

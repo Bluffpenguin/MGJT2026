@@ -15,7 +15,7 @@ MonoBehaviour:
   speakerName: 
   text: This boulder is so HUGE and DURABLE, I don't think anything could break it.
   choices:
-  - next: {fileID: 0}
+  - next: {fileID: 11400000, guid: 3692eef22aee4d7428e9784a9e802f7e, type: 2}
     choiceText: Bet I can, if I transfom.
     prerequisite: 
   - next: {fileID: 0}

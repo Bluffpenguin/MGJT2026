@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: freethinker5-Starter
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: Freethinker
+  text: I am so far from home... mama is missing to me. I wish to return myself in
+    good country.
+  choices:
+  - next: {fileID: 11400000, guid: cf022ff568847ae43a2bf17239a5e5b3, type: 2}
+    choiceText: What is your mama like?
+    prerequisite: 
+  - next: {fileID: 11400000, guid: 6c2e1d599e925b349b38ee28ffd64517, type: 2}
+    choiceText: Where are you from?
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 
