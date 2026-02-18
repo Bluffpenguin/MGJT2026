@@ -162,7 +162,7 @@ public class DialogueBox : MonoBehaviour
 
 	void StartDialogue(string dialogue)
 	{
-		AudioManager.instance.TW_Checker();
+		if (AudioManager.instance) AudioManager.instance.TW_Checker();
 		StopAllCoroutines();
 		textBox.text = string.Empty;
 		StartCoroutine(TypeLine(dialogue));
@@ -176,7 +176,7 @@ public class DialogueBox : MonoBehaviour
 			textBox.text += c;
 			yield return new WaitForSeconds(textSpeed);
 		}
-		AudioManager.instance.TW_Stop();
+		if (AudioManager.instance) AudioManager.instance.TW_Stop();
 		yield return new WaitForSeconds(0.5f);
 		finishedDialogue = true;
         
