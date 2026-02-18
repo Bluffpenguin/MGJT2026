@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
@@ -26,7 +27,7 @@ public class DialogueBox : MonoBehaviour
     bool finishedDialogue = true;
     bool finishedConversation = true;
     bool opened = false;
-    [SerializeField] Dialogue currentDialogue;
+    Dialogue currentDialogue;
 
     [Header("Debug")]
     [SerializeField] Dialogue debugMessage;
@@ -34,6 +35,7 @@ public class DialogueBox : MonoBehaviour
     private void Awake()
 	{
 		instance = this;
+		
         EventManager.OpenDialogueBox.AddListener(OpenMenu);
         EventManager.CloseDialogueBox.AddListener(CloseMenu);
         textSpeed = TEXT_SPEED;
@@ -114,6 +116,8 @@ public class DialogueBox : MonoBehaviour
         {
             PopulatePlain(currentDialogue);
         }
+
+        CheckDialogueEvents();
 	}
 
     void PopulateChoices(Dialogue dialogue)
@@ -148,7 +152,7 @@ public class DialogueBox : MonoBehaviour
         if (dialogue.next == null)
         {
             finishedConversation = true;
-            dialogue.endEvent.Invoke();
+            //dialogue.endEvent.Invoke();
         }
         
     }
@@ -179,6 +183,21 @@ public class DialogueBox : MonoBehaviour
 		textBox.text = string.Empty;
 		StartCoroutine(TypeLine(dialogue));
 	}
+
+    void CheckDialogueEvents()
+    {
+        // Check for transformations
+        if (currentDialogue.transformation != "")
+        {
+
+        }
+
+        // Check for word gain
+        if (currentDialogue.wordUnlock != "")
+        {
+            KeywordLibrary.LearnWord.Invoke(currentDialogue.wordUnlock);
+        }
+    }
 
 	IEnumerator TypeLine(string dialogue)
 	{

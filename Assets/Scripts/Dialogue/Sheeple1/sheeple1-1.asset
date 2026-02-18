@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: sheeple1-1
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: Sheeple
+  text: Really? What can you transform into?
+  choices:
+  - next: {fileID: 11400000, guid: 8c1c69cd1d501874098d126ba833998f, type: 2}
+    choiceText: A potatoe!
+    prerequisite: potatoe
+  - next: {fileID: 11400000, guid: 5af60588d10d0124badf5e266575073c, type: 2}
+    choiceText: An airplane!
+    prerequisite: airplane
+  - next: {fileID: 11400000, guid: 6968240c5fa75644889f0f5bb500c4b7, type: 2}
+    choiceText: A fly!
+    prerequisite: fly
+  - next: {fileID: 11400000, guid: b866f8fd61ce35244ba9b18380089607, type: 2}
+    choiceText: Nevermind
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 

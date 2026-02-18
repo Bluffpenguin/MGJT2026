@@ -14,10 +14,9 @@ public class Dialogue : ScriptableObject
 	[Header("For linear dialogue:")]
 	public Dialogue next;
 
-	[Header("End of Dialogue Event")]
-	public UnityEvent endEvent;
-
-
+	[Header("Dialogue Event")]
+	public string wordUnlock;
+	public string transformation;
 }
 
 [System.Serializable]
