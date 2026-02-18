@@ -10,7 +10,7 @@ public class DialogueBox : MonoBehaviour
     public static DialogueBox instance;
 
     [SerializeField] internal Button[] choiceButtons;
-    [SerializeField] internal TextMeshProUGUI textBox;
+    [SerializeField] internal TextMeshProUGUI textBox, speakerText;
     [SerializeField] internal GameObject dialoguePanel;
 
     
@@ -104,7 +104,8 @@ public class DialogueBox : MonoBehaviour
 
     void PopulateText()
     {
-        textSpeed = TEXT_SPEED;
+		speakerText.text = currentDialogue.speakerName;
+		textSpeed = TEXT_SPEED;
 		if (currentDialogue.choices.Count != 0)
 		{
 			PopulateChoices(currentDialogue);
@@ -121,7 +122,18 @@ public class DialogueBox : MonoBehaviour
 
         for (int i = 0; i < dialogue.choices.Count && i < choiceButtons.Length; i++)
         {
-            choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = dialogue.choices[i].choiceText;
+            // Check if the option has a prerequisite
+            if (dialogue.choices[i].prerequisite != "")
+            {
+				choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = "???";
+				choiceButtons[i].interactable = false;
+			}
+            else
+            {
+				choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = dialogue.choices[i].choiceText;
+                choiceButtons[i].interactable = true;
+			}
+                
             choiceButtons[i].gameObject.SetActive(true);
             if (i == 0) choiceButtons[0].onClick.AddListener(ProcessDialogueChoice1);
 			if (i == 1) choiceButtons[1].onClick.AddListener(ProcessDialogueChoice2);

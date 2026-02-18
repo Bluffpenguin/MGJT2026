@@ -5,7 +5,7 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "dialogue", menuName = "Dialogue/dialogueObj")]
 public class Dialogue : ScriptableObject
 {
-    public Sprite sprite;
+    public string speakerName;
     [TextArea] public string text;
 
 	[Header("For non-linear dialogue:")]
@@ -25,5 +25,7 @@ public struct Choice
 {
     public Dialogue next;
     public string choiceText;
+	[Header("Optional")]
+	public string prerequisite;
 
 }

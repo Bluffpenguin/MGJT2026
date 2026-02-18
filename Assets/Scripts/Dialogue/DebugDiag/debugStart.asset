@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: debugStart
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  sprite: {fileID: 0}
+  speakerName: Bob
   text: This is a test for the dialogue system
   choices:
   - next: {fileID: 11400000, guid: b033b38495aa59648a3258b8a3e43739, type: 2}
     choiceText: Abe
+    prerequisite: 
   - next: {fileID: 11400000, guid: 32fba38d41693eb4fa6fe9fb77de5aea, type: 2}
     choiceText: Ben
+    prerequisite: 
   - next: {fileID: 11400000, guid: f12134255fa97ca438d592fe86683c6a, type: 2}
     choiceText: Cain
+    prerequisite: Bird
   next: {fileID: 0}
   endEvent:
     m_PersistentCalls:
