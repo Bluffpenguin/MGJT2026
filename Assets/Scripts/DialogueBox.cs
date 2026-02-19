@@ -137,7 +137,7 @@ public class DialogueBox : MonoBehaviour
 		// Check for transformations
 		if (currentDialogue.transformation != "")
 		{
-            EventManager.Transformation.Invoke(currentDialogue.transformation);
+            EventManager.transformation.Invoke(currentDialogue.transformation);
 		}
 
 		opened = false;
