@@ -18,6 +18,10 @@ public class AudioManager : MonoBehaviour
         instance = this;
 	}
 
+    void Start()
+    {
+        m_Source.Play();
+    }
     public void UI_One_Shot(AudioClip clip,float vol)
     {
         ui_Source.PlayOneShot(clip, vol);
