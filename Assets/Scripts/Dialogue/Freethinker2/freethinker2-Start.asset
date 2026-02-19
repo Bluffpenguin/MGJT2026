@@ -18,10 +18,10 @@ MonoBehaviour:
   - next: {fileID: 11400000, guid: 5beab54952327a445a90ce6356bf9bc2, type: 2}
     choiceText: Have fun.
     prerequisite: 
-  - next: {fileID: 11400000, guid: be343f136fdfdae459d051b39931b700, type: 2}
+  - next: {fileID: 0}
     choiceText: Make connections.
     prerequisite: 
-  - next: {fileID: 11400000, guid: 15943ab34ac916f41a582fecf83334b5, type: 2}
+  - next: {fileID: 0}
     choiceText: Eat bugs.
     prerequisite: 
   next: {fileID: 0}
