@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: freethinker6-11311
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: I have found the running of the babbling brook, the glimmering sheen of a
-    well-polished pauldron, or the flickering of a torch casting shadows upon a wall...
+  text: The babbling of the brook, the glimmering sheen of a well-polished pauldron,
+    or the flickering of a torch casting shadows upon a wall...
   choices: []
   next: {fileID: 0}
   wordUnlock: 

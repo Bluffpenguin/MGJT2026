@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: player2s-hammer
+  m_Name: sheeple1-2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Rico
-  text: I'll transform into a hammer!
+  speakerName: Sheeple
+  text: I totally believe you!
   choices: []
   next: {fileID: 0}
   wordUnlock: 
-  transformation: hammer
+  transformation: 

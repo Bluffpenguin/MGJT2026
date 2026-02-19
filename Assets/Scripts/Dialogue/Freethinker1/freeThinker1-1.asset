@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: freeThinker1-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: 
-  text: Oh that's wonderful to hear. I've grown so many, they're starting to rot
-    in my garden... it's attracting a lot of <color=red>flies</color>.
+  text: Wonderful! I've grown so many, they're starting to rot... it's attracting
+    <color=red>flies</color>.
   choices:
-  - next: {fileID: 11400000, guid: 8238da6206224d3489ad951fe8ad4ed4, type: 2}
-    choiceText: More ideas?
+  - next: {fileID: 11400000, guid: a75e0a1bdab4b4145bc09157f048a410, type: 2}
+    choiceText: Flying?
     prerequisite: 
-  - next: {fileID: 11400000, guid: 4f913a253dcb54442aed3d3c9a3a3633, type: 2}
-    choiceText: Bye.
+  - next: {fileID: 0}
+    choiceText: Okay, bye.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: fly

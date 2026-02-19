@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: freeThinker1-Start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: 
-  text: Have you ever grown <color=red>potatoes</color> before? I used to find them
-    dull. As I get older, I see the appeal.
+  text: Have you ever grown <color=red>potatoes</color>? I used to find them dull.
+    As I get older, I see the appeal.
   choices:
-  - next: {fileID: 11400000, guid: a87a43cc2caeee54cbf42f90d9dfc03e, type: 2}
+  - next: {fileID: 11400000, guid: 943dde2aca796c74a8aac9a5021b7e6e, type: 2}
     choiceText: Yes.
     prerequisite: 
   - next: {fileID: 11400000, guid: df5d777247f367c4b9a72b625eeb942a, type: 2}

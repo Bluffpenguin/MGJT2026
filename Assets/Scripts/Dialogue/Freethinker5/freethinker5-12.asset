@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: freethinker5-12
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Yes, but the word does not come to me. Help to move dirt.
+  text: Yes, but the word does not come to me. Helps to move dirt.
   choices:
   - next: {fileID: 0}
     choiceText: Very nice.
     prerequisite: 
   - next: {fileID: 11400000, guid: 47237b6879fa00046853f92909889c2e, type: 2}
-    choiceText: Try ot think of the name.
+    choiceText: Try to think!
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

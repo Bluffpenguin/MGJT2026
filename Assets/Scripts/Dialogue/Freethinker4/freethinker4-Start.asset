@@ -10,11 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: player1s.fly
+  m_Name: freethinker4-Start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: User
-  text: I'll transform into a fly!
-  choices: []
+  speakerName: Freethinker
+  text: This land be truly sensational. I could stay here forever, me heartie.
+  choices:
+  - next: {fileID: 11400000, guid: 19de9a8ff377af74abfda1ae6bfe9be4, type: 2}
+    choiceText: What makes it great?
+    prerequisite: 
+  - next: {fileID: 11400000, guid: f610b4dcb1767a24e937f7b5203f39f5, type: 2}
+    choiceText: You talk like a pirate.
+    prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
-  transformation: fly
+  transformation: 

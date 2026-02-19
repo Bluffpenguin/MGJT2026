@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: player1f.farewell
+  m_Name: freethinker4-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Player
-  text: Thank you for your service.
-  choices: []
+  speakerName: Freethinker
+  text: Well, tisn't just any cave. Tis the cave where I met me fav'rit pet! An where
+    I had ta bury the poor soul...
+  choices:
+  - next: {fileID: 11400000, guid: c7e49f2e3f9942842b648e973d5f1e42, type: 2}
+    choiceText: What kind of pet?
+    prerequisite: 
   next: {fileID: 0}
-  endEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  wordUnlock: 
+  transformation: 

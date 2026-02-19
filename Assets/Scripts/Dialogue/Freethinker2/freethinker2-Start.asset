@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker2-Start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: I just don't know anymore... What's the point of going on?
+  text: I don't know... What's the point of going on?
   choices:
   - next: {fileID: 11400000, guid: 5beab54952327a445a90ce6356bf9bc2, type: 2}
     choiceText: Have fun.

@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: player1s.airplane
+  m_Name: freethinker4-111
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: User
-  text: I'll transform into an airplane!
-  choices: []
+  speakerName: Freethinker
+  text: '''Preciate it, landlubber.'
+  choices:
+  - next: {fileID: 0}
+    choiceText: Seeya.
+    prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
-  transformation: airplane
+  transformation: 

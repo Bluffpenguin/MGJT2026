@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker3-1
+  m_Name: freethinker4-11
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Well, tisn't just any cave. Tis the cave where I met me fav'rit pet! An where
-    I had ta bury the poor ole soul...
+  text: He was a <color=red>wee malamute</color>. Troubled upon the waters, aye.
+    Thought he saw a bone driftin atop the seafoam, an vanished...
   choices:
-  - next: {fileID: 11400000, guid: c7e49f2e3f9942842b648e973d5f1e42, type: 2}
-    choiceText: What kind of pet was it?
+  - next: {fileID: 11400000, guid: 1ba0cca6c0d25c240a30aaa56b2b847b, type: 2}
+    choiceText: My condolences.
+    prerequisite: 
+  - next: {fileID: 11400000, guid: 01a9a8593a951a7408c37cc8ab58b009, type: 2}
+    choiceText: How did you bury him?
     prerequisite: 
   next: {fileID: 0}
-  wordUnlock: 
+  wordUnlock: malamute
   transformation: 

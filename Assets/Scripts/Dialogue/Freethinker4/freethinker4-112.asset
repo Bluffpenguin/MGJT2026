@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: player1f.2
+  m_Name: freethinker4-112
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Player
-  text: I have not grown potatoes.
-  choices: []
-  next: {fileID: 11400000, guid: fb648eba54fc5cd4483fc5f8b90dee42, type: 2}
-  endEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  speakerName: Freethinker
+  text: I'LL FILL YA FULL O DAY LIGHT IF YA KEEP SMART WIT ME!
+  choices:
+  - next: {fileID: 0}
+    choiceText: Leave.
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: sheeple3-Starter
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Sheeple
-  text: This force field is literally impenetrable. I'm being serious, I don't think
-    you can pass this one.
+  text: This force field is literally impenetrable. I'm serious, I don't think you
+    can pass this one.
   choices:
   - next: {fileID: 11400000, guid: a0a3753bb7ddf7d41afc703ffa563db0, type: 2}
     choiceText: Not if I transform!
