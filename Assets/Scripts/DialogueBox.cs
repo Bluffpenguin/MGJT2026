@@ -27,6 +27,7 @@ public class DialogueBox : MonoBehaviour
     bool finishedDialogue = true;
     bool finishedConversation = true;
     bool opened = false;
+    bool fastText = false;
     public bool IsOpen
     {
         get { return opened; }
@@ -94,9 +95,14 @@ public class DialogueBox : MonoBehaviour
         else if (ConfirmationInput())
         {
             // Speed Up Text
-            if (textSpeed != TEXT_SPEED / 2)
+            if (!fastText)
             {
-                textSpeed = TEXT_SPEED / 2;
+                textSpeed = TEXT_SPEED / 3;
+                fastText = true;
+            }
+            else
+            {
+                textSpeed = 0;
             }
         }
 
@@ -126,7 +132,7 @@ public class DialogueBox : MonoBehaviour
         finishedConversation = false;
 		dialoguePanel.SetActive(true);
         currentDialogue = dialogue;
-            
+        EventManager.FreezePlayer.Invoke();    
 		PopulateText();
     }
 
@@ -134,13 +140,14 @@ public class DialogueBox : MonoBehaviour
     {
         StopAllCoroutines();
 
-		// Check for transformations
-		if (currentDialogue.transformation != "")
-		{
+        // Check for transformations
+        if (currentDialogue.transformation != "")
+        {
             EventManager.Transformation.Invoke(currentDialogue.transformation);
-		}
+        }
+        else EventManager.UnfreezePlayer.Invoke();
 
-		opened = false;
+            opened = false;
         dialoguePanel.SetActive(false);
 		foreach (var choice in choiceButtons)
 		{
@@ -175,8 +182,18 @@ public class DialogueBox : MonoBehaviour
             // Check if the option has a prerequisite
             if (dialogue.choices[i].prerequisite != "")
             {
-				choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = "???";
-				choiceButtons[i].interactable = false;
+                // Already learned word
+                if (KeywordLibrary.instance.Check(dialogue.choices[i].prerequisite))
+                {
+					choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = dialogue.choices[i].choiceText;
+					choiceButtons[i].interactable = true;
+				}
+                else
+                {
+					choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = "???";
+					choiceButtons[i].interactable = false;
+				}
+                    
 			}
             else
             {
@@ -189,6 +206,7 @@ public class DialogueBox : MonoBehaviour
 			if (i == 1) choiceButtons[1].onClick.AddListener(ProcessDialogueChoice2);
 			if (i == 2) choiceButtons[2].onClick.AddListener(ProcessDialogueChoice3);
 			if (i == 3) choiceButtons[3].onClick.AddListener(ProcessDialogueChoice4);
+			if (i == 4) choiceButtons[4].onClick.AddListener(ProcessDialogueChoice5);
 		}
     }
 
@@ -207,6 +225,7 @@ public class DialogueBox : MonoBehaviour
 	void ProcessDialogueChoice2() { ProcessChoice(1); }
 	void ProcessDialogueChoice3() { ProcessChoice(2); }
 	void ProcessDialogueChoice4() { ProcessChoice(3); }
+	void ProcessDialogueChoice5() { ProcessChoice(4); }
 
 	void ProcessChoice(int index)
     {
@@ -225,14 +244,15 @@ public class DialogueBox : MonoBehaviour
 		}
         else
         {
-            CloseMenu();
-        }
+			EventManager.CloseDialogueBox.Invoke();
+		}
         
     }
 
 	void StartDialogue(string dialogue)
 	{
 		if (AudioManager.instance) AudioManager.instance.TW_Checker();
+        fastText = false;
 		StopAllCoroutines();
 		textBox.text = string.Empty;
 		StartCoroutine(TypeLine(dialogue));

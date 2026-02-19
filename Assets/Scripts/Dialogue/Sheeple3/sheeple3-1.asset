@@ -28,7 +28,7 @@ MonoBehaviour:
     choiceText: A <color=red>shovel</color>.
     prerequisite: shovel
   - next: {fileID: 0}
-    choiceText: You're right
+    choiceText: You're right.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

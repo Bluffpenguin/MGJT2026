@@ -14,4 +14,6 @@ static public class EventManager
     static public UnityEvent FreezePlayer = new();
 	static public UnityEvent UnfreezePlayer = new();
     static public UnityEvent PlayerTalk = new();
+    static public UnityEvent HidePlayer = new();
+    static public UnityEvent ShowPlayer = new();
 }

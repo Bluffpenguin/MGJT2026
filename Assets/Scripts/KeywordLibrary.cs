@@ -27,12 +27,14 @@ public class KeywordLibrary : MonoBehaviour
 	// Return whether or not the words has been found
 	public bool Check(string keyword)
 	{
+		Debug.Log("Checking Word");
 		return Keywords[keyword];
 	}
 
 	//Set the provided word to True/False
 	public void Learn(string keyword)
 	{
+		Debug.Log("Learned " + keyword);
 		Keywords[keyword] = true;
 	}
 
