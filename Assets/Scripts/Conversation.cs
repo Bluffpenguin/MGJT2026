@@ -2,23 +2,20 @@ using UnityEngine;
 
 public class Conversation : MonoBehaviour
 {
-    public Dialogue dbox;
+    public Dialogue dialogue;
+    bool talkingToPlayer = false, playerInRange = false;
 
-    private bool triggerActive = false;
+	private void Awake()
+	{
+        EventManager.CloseDialogueBox.AddListener(OnConversationEnd);
+        EventManager.PlayerTalk.AddListener(OnConversationStart);
+	}
 
-    // Reference to the prefab. Drag a prefab into this field in the Inspector.
-    public GameObject myPrefab;
-    void Start()
-    {
-        
-    }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        EventManager.OpenDialogueBox.Invoke(dbox);
         if (other.CompareTag("Player"))
         {
-            triggerActive = true;
-       
+            playerInRange = true;
         }
     }
 
@@ -26,8 +23,27 @@ public class Conversation : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            triggerActive = false;
+            playerInRange = false;
         }
+    }
+
+    void OnConversationEnd()
+    {
+        if (!talkingToPlayer) return;
+
+        talkingToPlayer = false;
+        EventManager.UnfreezePlayer.Invoke();
+    }
+
+    void OnConversationStart()
+    {
+        if (!playerInRange || DialogueBox.instance.IsOpen) return;
+
+        talkingToPlayer = true;
+        EventManager.OpenDialogueBox.Invoke(dialogue);
+        EventManager.FreezePlayer.Invoke();
+
+
     }
 
 }

@@ -171,8 +171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7}
-  m_SizeDelta: {x: 763.37, y: 131.34}
+  m_AnchoredPosition: {x: -6.2791, y: -3.5448003}
+  m_SizeDelta: {x: 723.9111, y: 105.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5454120246760450216
 CanvasRenderer:
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -232,9 +232,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -293,7 +293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3090412569655398233
 RectTransform:
   m_ObjectHideFlags: 0
@@ -720,7 +720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.84741, y: 74}
+  m_AnchoredPosition: {x: -102.84741, y: 69}
   m_SizeDelta: {x: 568.8889, y: 49.8591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5137616026647663095
@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6731475725235668776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1252,7 +1252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4831266503768864294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1323396036908302325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   TEXT_SPEED: 0.1
   bobVariance: 4
   bobSpeed: 8
-  choiceOffsetY: 100
+  choiceOffsetY: 75
   choiceOffsetX: 50
   debugMessage: {fileID: 11400000, guid: 2ffa06a536f283647bbd1f69edcb9e01, type: 2}
 --- !u!114 &5739077971388799031
@@ -1621,7 +1621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5920711690033849787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1759,7 +1759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1500622068613398308
 RectTransform:
   m_ObjectHideFlags: 0

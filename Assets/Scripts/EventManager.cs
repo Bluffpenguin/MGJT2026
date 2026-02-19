@@ -9,4 +9,9 @@ static public class EventManager
 
     // Dialogue Choices
     static public UnityEvent<string> transformation = new();
+
+    // Player Event
+    static public UnityEvent FreezePlayer = new();
+	static public UnityEvent UnfreezePlayer = new();
+    static public UnityEvent PlayerTalk = new();
 }
