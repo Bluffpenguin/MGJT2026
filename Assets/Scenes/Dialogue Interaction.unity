@@ -5193,6 +5193,17 @@ MonoBehaviour:
       m_Action: Interaction
       m_Flags: 0
     m_Flags: 0
+  speed: 5
+  currentForm: 0
+  transforming: 0
+  transformSprites:
+  - {fileID: 21300000, guid: ac91914421dd9624b8f795b2e30f4ea7, type: 3}
+  - {fileID: 21300000, guid: 12a0f9911685de94ca132cb8a708dc7f, type: 3}
+  shineVFXPrefab: {fileID: 7938384439400024403, guid: b6e54acc881a03c4a9719b161a25a3e3, type: 3}
+  shineVFXTransform: {fileID: 0}
+  startingScale: 0
+  finalScale: 0.4
+  transformTime: 0.75
 --- !u!212 &829487520
 SpriteRenderer:
   serializedVersion: 2
@@ -5216,7 +5227,7 @@ SpriteRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
