@@ -4,6 +4,7 @@ public class Conversation : MonoBehaviour
 {
     public Dialogue dialogue;
     bool talkingToPlayer = false, playerInRange = false;
+	[SerializeField] GameObject prompt;
 
 	private void Awake()
 	{
@@ -16,7 +17,8 @@ public class Conversation : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-        }
+			prompt.SetActive(true);
+		}
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -24,7 +26,8 @@ public class Conversation : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-        }
+			prompt.SetActive(false);
+		}
     }
 
     void OnConversationEnd()
