@@ -1,3 +1,4 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -6,21 +7,25 @@ public class Movement : MonoBehaviour
 {
     public InputAction MoveAction, interaction;
     bool canMove = true;
+    public float speed = 5f;
+    private Rigidbody2D rb;
 
-	private void Awake()
-	{
+    private void Awake()
+	  {
         EventManager.FreezePlayer.AddListener(freezeMovement);
 		EventManager.UnfreezePlayer.AddListener(unfreezeMovement);
-	}
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
+	  }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
         MoveAction.Enable();
         interaction.Enable();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+
+   void FixedUpdate()
     {
         if (!canMove) return; // Anything below this will not run if canMove is false
         if (interaction.WasPressedThisFrame())
@@ -28,9 +33,10 @@ public class Movement : MonoBehaviour
             EventManager.PlayerTalk.Invoke();
         }
         Vector2 move = MoveAction.ReadValue<Vector2>();
-        //Debug.Log(move);
-        Vector2 position = (Vector2)transform.position + move * 0.04f;
-        transform.position = position;
+        
+
+        rb.linearVelocity = move * speed;
+
 
     }
 
