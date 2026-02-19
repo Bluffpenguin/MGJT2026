@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker6-1112
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: I am glad to not be alone in this suffering.
+  text: I rejoice to not be alone in this suffering.
   choices:
   - next: {fileID: 0}
     choiceText: Me too.

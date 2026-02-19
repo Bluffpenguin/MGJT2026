@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: freethinker6-113111
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Also, I found a sweet <color=red>enchanted battle axe</color> earlier.
+  text: Also, I found a sweet <color=red>enchanted battle axe</color> earlier. Bruh.
   choices:
   - next: {fileID: 0}
-    choiceText: That's sick, bro.
+    choiceText: Sick, fam.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: battleaxe

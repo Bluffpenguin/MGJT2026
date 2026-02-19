@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker5Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Sinfully, the last one will not listen to you. To my mother I will say hello
+  text: Sinfully, the last one will not listen to you. To my mama I will say hello
     for you.
   choices: []
   next: {fileID: 0}

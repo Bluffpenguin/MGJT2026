@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: sheeple2-start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: 
-  text: This boulder is so HUGE and DURABLE, I don't think anything could break it.
+  text: This boulder is so HUGE and DURABLE, I doubt anything could break it.
   choices:
   - next: {fileID: 11400000, guid: 3692eef22aee4d7428e9784a9e802f7e, type: 2}
-    choiceText: Bet I can, if I transfom.
+    choiceText: Bet I can.
     prerequisite: 
   - next: {fileID: 0}
     choiceText: You're right.

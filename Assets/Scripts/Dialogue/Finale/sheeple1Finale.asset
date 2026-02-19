@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: sheeple1Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Sheeple
-  text: I knew you would make it! High-five! Now go convince the final dude!
+  text: I knew you would make it! High-five! Now go convince the last dude!
   choices: []
   next: {fileID: 0}
   wordUnlock: 

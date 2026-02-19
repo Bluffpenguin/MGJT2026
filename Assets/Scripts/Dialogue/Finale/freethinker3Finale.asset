@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: freethinker3Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: I'M STILL WORKING HARD. YOU DIDN'T CHANGE ANYTHING FOR ME. GOOD LUCK ON THE
-    LAST GUY.
+  text: YOU DIDN'T CHANGE ANYTHING FOR ME. GOOD LUCK ON THE LAST GUY.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

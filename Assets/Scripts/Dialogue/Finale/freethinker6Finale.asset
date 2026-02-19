@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker6Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Good luck with that final man, friend. He listeneth to no man.
+  text: Good luck with the final man, friend. He listeneth to no man.
   choices: []
   next: {fileID: 0}
   wordUnlock: 
