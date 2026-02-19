@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker3-11
+  m_Name: freethinker4-112
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: He was just a <color=red>wee malamute</color>. Troubled upon the waters,
-    aye. Thought he saw a bone driftin atop the seafoam, an vanished...
+  text: I'LL FILL YA FULL O DAY LIGHT IF YA KEEP SMART WIT ME!
   choices:
-  - next: {fileID: 11400000, guid: 1ba0cca6c0d25c240a30aaa56b2b847b, type: 2}
-    choiceText: My condolences.
-    prerequisite: 
-  - next: {fileID: 11400000, guid: 01a9a8593a951a7408c37cc8ab58b009, type: 2}
-    choiceText: How did you have a body to bury?
+  - next: {fileID: 0}
+    choiceText: Leave.
     prerequisite: 
   next: {fileID: 0}
-  wordUnlock: malamute
+  wordUnlock: 
   transformation: 
