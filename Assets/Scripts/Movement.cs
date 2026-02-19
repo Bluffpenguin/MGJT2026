@@ -29,6 +29,11 @@ public class Movement : MonoBehaviour
     [SerializeField] float finalScale = 0.4f;
     [SerializeField] float transformTime = 1;
 
+    [Header("Hammer Movement")]
+    [SerializeField] float hamRotSpeedX=2, hamRotSpeedZ=2;
+    [SerializeField] Vector2 hammerPivot = Vector2.zero;
+    [SerializeField] Transform hammerPivotTest;
+
     private void Awake()
 	  {
         // Listeners
@@ -37,7 +42,7 @@ public class Movement : MonoBehaviour
         EventManager.Transformation.AddListener(Transform);
 
         // Components
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 	  }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,6 +55,7 @@ public class Movement : MonoBehaviour
 	// Update is called once per frame
 	private void Update()
 	{
+        //Debug
         if (Keyboard.current.uKey.wasPressedThisFrame)
         {
             Transform("Shovel");
@@ -81,6 +87,7 @@ public class Movement : MonoBehaviour
         
         Vector2 move = MoveAction.ReadValue<Vector2>();
         rb.linearVelocity = move * speed;
+        FormMovemenUpdate(move);
 
 
     }
@@ -88,16 +95,21 @@ public class Movement : MonoBehaviour
     void freezeMovement()
     {
         canMove = false;
-    }
+		rb.linearVelocity.Set(0, 0);
+	}
 
 	void unfreezeMovement()
 	{
 		canMove = true;
 	}
 
-    void Transform(string newForm)
+	#region Transformation
+
+	void Transform(string newForm)
     {
         transforming = true;
+        rb.linearVelocity.Set(0, 0);
+        
         switch(newForm)
         {
             case "Man":
@@ -134,6 +146,7 @@ public class Movement : MonoBehaviour
 
     void ApplyTransform()
     {
+		spriteRenderer.transform.localRotation = Quaternion.identity;
 		switch (currentForm)
 		{
 			case Form.Man:
@@ -162,6 +175,55 @@ public class Movement : MonoBehaviour
 				break;
             default:
                 break;
+		}
+	}
+
+    void FormMovemenUpdate(Vector2 move)
+    {
+		switch (currentForm)
+		{
+			case Form.Man:
+				
+				break;
+			case Form.Shovel:
+				
+				break;
+			case Form.Brakes:
+				
+				break;
+			case Form.Fly:
+				
+				break;
+			case Form.Apathy:
+				
+				break;
+			case Form.Frog:
+				
+				break;
+			case Form.Airplane:
+				
+				break;
+			case Form.Hammer:
+				if (move.x > 0.1)
+                {
+                    spriteRenderer.transform.Rotate(Vector3.forward, -hamRotSpeedZ, Space.Self);
+                }
+                else if (move.x < -0.1)
+                {
+					spriteRenderer.transform.Rotate(Vector3.forward, hamRotSpeedZ, Space.Self);
+				}
+
+                if (move.y > 0.1)
+                {
+					spriteRenderer.transform.Rotate(Vector3.left, hamRotSpeedX, Space.Self);
+				}
+				else if (move.y < -0.1)
+				{
+					spriteRenderer.transform.Rotate(Vector3.left, -hamRotSpeedX, Space.Self);
+				}
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -200,5 +262,11 @@ public class Movement : MonoBehaviour
         transforming = false;
         canMove = true;
         Destroy(shineVFXTransform.gameObject);
+	}
+	#endregion
+
+	private void OnDrawGizmosSelected()
+	{
+        Gizmos.DrawSphere(transform.TransformPoint(hammerPivot), 0.2f);
 	}
 }
