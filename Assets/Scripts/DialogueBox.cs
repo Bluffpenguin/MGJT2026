@@ -27,6 +27,11 @@ public class DialogueBox : MonoBehaviour
     bool finishedDialogue = true;
     bool finishedConversation = true;
     bool opened = false;
+    public bool IsOpen
+    {
+        get { return opened; }
+    }
+
     Dialogue currentDialogue;
 
     [Header("Dialogue Bob")]
