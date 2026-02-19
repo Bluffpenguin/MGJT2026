@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker2-Start
+  m_Name: freethinker4-11
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: I just don't know anymore... What's the point of going on?
+  text: He was just a <color=red>wee malamute</color>. Troubled upon the waters,
+    aye. Thought he saw a bone driftin atop the seafoam, an vanished...
   choices:
-  - next: {fileID: 11400000, guid: 5beab54952327a445a90ce6356bf9bc2, type: 2}
-    choiceText: Have fun.
+  - next: {fileID: 11400000, guid: 1ba0cca6c0d25c240a30aaa56b2b847b, type: 2}
+    choiceText: My condolences.
     prerequisite: 
-  - next: {fileID: 11400000, guid: be343f136fdfdae459d051b39931b700, type: 2}
-    choiceText: Make connections.
-    prerequisite: 
-  - next: {fileID: 11400000, guid: 15943ab34ac916f41a582fecf83334b5, type: 2}
-    choiceText: Eat bugs.
+  - next: {fileID: 11400000, guid: 01a9a8593a951a7408c37cc8ab58b009, type: 2}
+    choiceText: How did you have a body to bury?
     prerequisite: 
   next: {fileID: 0}
-  wordUnlock: 
+  wordUnlock: malamute
   transformation: 
