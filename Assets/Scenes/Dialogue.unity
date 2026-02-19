@@ -21032,7 +21032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51854cc2253b1004d83be63490269633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  mapBoundary: {fileID: 348636585}
+  mapBoundary: {fileID: 506151797}
   direction: 2
   additivePos: 1
 --- !u!61 &1045538652
@@ -21108,7 +21108,7 @@ Transform:
   m_GameObject: {fileID: 1062604397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.039999, y: 2.5299988, z: 0}
+  m_LocalPosition: {x: 16.15, y: 2.5299988, z: 0}
   m_LocalScale: {x: 0.3002, y: 2.6562998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21126,7 +21126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51854cc2253b1004d83be63490269633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  mapBoundary: {fileID: 506151797}
+  mapBoundary: {fileID: 1256611232}
   direction: 3
   additivePos: 1
 --- !u!61 &1062604400
@@ -21463,14 +21463,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256611230}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 71.1, y: 46, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7089555, w: 0.7052532}
+  m_LocalPosition: {x: 71.09, y: 44.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1045538650}
   m_Father: {fileID: 1266183644}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.3}
 --- !u!60 &1256611232
 PolygonCollider2D:
   m_ObjectHideFlags: 0
