@@ -19,5 +19,5 @@ MonoBehaviour:
     choiceText: Perfect!
     prerequisite: 
   next: {fileID: 0}
-  wordUnlock: 
+  wordUnlock: shovel
   transformation: 
