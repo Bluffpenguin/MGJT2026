@@ -31,8 +31,6 @@ public class Movement : MonoBehaviour
 
     [Header("Hammer Movement")]
     [SerializeField] float hamRotSpeedX=2, hamRotSpeedZ=2;
-    [SerializeField] Vector2 hammerPivot = Vector2.zero;
-    [SerializeField] Transform hammerPivotTest;
 
     private void Awake()
 	  {
@@ -264,9 +262,4 @@ public class Movement : MonoBehaviour
         Destroy(shineVFXTransform.gameObject);
 	}
 	#endregion
-
-	private void OnDrawGizmosSelected()
-	{
-        Gizmos.DrawSphere(transform.TransformPoint(hammerPivot), 0.2f);
-	}
 }
