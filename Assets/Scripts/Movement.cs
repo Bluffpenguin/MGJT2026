@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     bool canMove = true;
     public float speed = 5f;
     private Rigidbody2D rb;
+    private Animator animator;
 
     // Transformations
     enum Form
@@ -48,6 +49,7 @@ public class Movement : MonoBehaviour
         MoveAction.Enable();
         interaction.Enable();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
 	// Update is called once per frame
@@ -79,14 +81,17 @@ public class Movement : MonoBehaviour
 			EventManager.PlayerTalk.Invoke();
 		}
 	}
+
 	void FixedUpdate()
     {
         if (!canMove) return; // Anything below this will not run if canMove is false
         
         Vector2 move = MoveAction.ReadValue<Vector2>();
         rb.linearVelocity = move * speed;
+        animator.SetBool("IsWalking", true);
+        animator.SetFloat("InputX", move.x);
+        animator.SetFloat("InputY", move.y);
         FormMovemenUpdate(move);
-
 
     }
 

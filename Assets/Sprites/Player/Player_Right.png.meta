@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: ac91914421dd9624b8f795b2e30f4ea7
+guid: 8eaccc53f9eeb3948b9b1e7e66547164
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6932257649636215094
-    second: main_character_talking_2_front_0
+      213: -7791752638867363331
+    second: Player_Right_0
+  - first:
+      213: 6286454110433351642
+    second: Player_Right_1
+  - first:
+      213: 6727821506554963161
+    second: Player_Right_2
+  - first:
+      213: -4142210147824634017
+    second: Player_Right_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,23 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main_character_talking_2_front_0
+      name: Player_Right_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 11
-        width: 295
-        height: 774
+        x: 0
+        y: 0
+        width: 321
+        height: 781
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac6f2f5756cabcf90800000000000000
-      internalID: -6932257649636215094
+      spriteID: df92996e1422ed390800000000000000
+      internalID: -7791752638867363331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Right_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 321
+        height: 781
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad79c25d4b8fd3750800000000000000
+      internalID: 6286454110433351642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Right_2
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 321
+        height: 781
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d42172c3060e5d50800000000000000
+      internalID: 6727821506554963161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Right_3
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 0
+        width: 321
+        height: 781
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57f4e121d9e386c0800000000000000
+      internalID: -4142210147824634017
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 02121977b21b51c48965ccd5b44ca4a9
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +221,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":321.0,"y":781.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      main_character_talking_2_front_0: -6932257649636215094
+      Player_Right_0: -7791752638867363331
+      Player_Right_1: 6286454110433351642
+      Player_Right_2: 6727821506554963161
+      Player_Right_3: -4142210147824634017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
