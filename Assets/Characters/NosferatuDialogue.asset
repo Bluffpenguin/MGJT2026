@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145ae80c585c7d47875b4923753dc9f, type: 3}
   m_Name: NosferatuDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: 
-  dialogueLines: []
+  npcName: Nosferatu
+  dialogueLines:
+  - Beep boop
+  - Lol
   typingSpeed: 0.5
-  voiceSound: {fileID: 0}
+  voiceSound: {fileID: 8300000, guid: fd0dfbe15a7c7c048aafad9383889e31, type: 3}
   voicePitch: 1
