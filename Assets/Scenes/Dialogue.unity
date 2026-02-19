@@ -9058,7 +9058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51854cc2253b1004d83be63490269633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  mapBoundary: {fileID: 348636585}
+  mapBoundary: {fileID: 506151797}
 --- !u!1 &490639079
 GameObject:
   m_ObjectHideFlags: 0
