@@ -15,10 +15,10 @@ MonoBehaviour:
   speakerName: Sheeple
   text: This gap is quite large... I doubt that anyone could cross it!
   choices:
-  - next: {fileID: 11400000, guid: e430c1c76736f2f4babb615b25687264, type: 2}
-    choiceText: I can!
+  - next: {fileID: 11400000, guid: a956e6f563ed4d14aaeec0a93a09b469, type: 2}
+    choiceText: I can if I transform!
     prerequisite: 
-  - next: {fileID: 11400000, guid: 55e032c9f7e57f142b3527f86d170fa8, type: 2}
+  - next: {fileID: 0}
     choiceText: You're right.
     prerequisite: 
   next: {fileID: 0}

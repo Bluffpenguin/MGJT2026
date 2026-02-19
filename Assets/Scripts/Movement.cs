@@ -13,11 +13,11 @@ public class Movement : MonoBehaviour
     private Animator animator;
 
     // Transformations
-    enum Form
+    public enum Form
     {
         Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane, Hammer
     }
-    [SerializeField] Form currentForm = Form.Man;
+    [SerializeField] public Form currentForm = Form.Man;
     [SerializeField] bool transforming = false;
     SpriteRenderer spriteRenderer;
     [SerializeField] Sprite[] transformSprites; // Keep in the same order as the Form enum
@@ -39,6 +39,8 @@ public class Movement : MonoBehaviour
         EventManager.FreezePlayer.AddListener(freezeMovement);
 		EventManager.UnfreezePlayer.AddListener(unfreezeMovement);
         EventManager.Transformation.AddListener(Transform);
+        EventManager.ShowPlayer.AddListener(ShowPlayer);
+        EventManager.HidePlayer.AddListener(HidePlayer);
 
         // Components
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -58,19 +60,19 @@ public class Movement : MonoBehaviour
         //Debug
         if (Keyboard.current.uKey.wasPressedThisFrame)
         {
-            Transform("Shovel");
+            Transform("shovel");
         }
 		if (Keyboard.current.iKey.wasPressedThisFrame)
 		{
-			Transform("Hammer");
+			Transform("hammer");
 		}
 		if (Keyboard.current.oKey.wasPressedThisFrame)
 		{
-			Transform("Frog");
+			Transform("frog");
 		}
 		if (Keyboard.current.yKey.wasPressedThisFrame)
 		{
-			Transform("Man");
+			Transform("man");
 		}
 
 		if (transforming) canMove = false;
@@ -115,35 +117,35 @@ public class Movement : MonoBehaviour
         
         switch(newForm)
         {
-            case "Man":
+            case "man":
                 currentForm = Form.Man;
                 break;
-            case "Shovel":
+            case "shovel":
                 Debug.Log("Transform into shovel");
                 currentForm = Form.Shovel;
                 break;
-            case "Fly":
+            case "fly":
                 currentForm = Form.Fly;
                 break;
-            case "Airplane":
+            case "airplane":
                 currentForm = Form.Airplane;
                 break;
-            case "Brakes":
+            case "brakes":
                 currentForm = Form.Brakes;
                 break;
-            case "Apathy":
+            case "apathy":
                 currentForm = Form.Apathy;
                 break;
-            case "Frog":
+            case "frog":
                 currentForm = Form.Frog;
                 break;
-            case "Hammer":
+            case "hammer":
                 currentForm = Form.Hammer;
                 break;
             default: 
                 break;
         }
-        shineVFXTransform = Instantiate(shineVFXPrefab, transform.position, Quaternion.identity).transform;
+        shineVFXTransform = Instantiate(shineVFXPrefab, spriteRenderer.transform.position, Quaternion.identity).transform;
         StartCoroutine("TransformTrasition");
     }
 
@@ -266,5 +268,15 @@ public class Movement : MonoBehaviour
         canMove = true;
         Destroy(shineVFXTransform.gameObject);
 	}
+
+    void ShowPlayer()
+    {
+        spriteRenderer.enabled = true;
+    }
+    
+    void HidePlayer()
+    {
+        spriteRenderer.enabled = false;
+    }
 	#endregion
 }

@@ -27,6 +27,9 @@ MonoBehaviour:
   - next: {fileID: 11400000, guid: de30168c5466c5f48b1052f80f2cf2a9, type: 2}
     choiceText: A <color=red>hammer</color>
     prerequisite: hammer
+  - next: {fileID: 0}
+    choiceText: Wait, nevermind...
+    prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
   transformation: 

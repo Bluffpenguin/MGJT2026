@@ -17,10 +17,10 @@ MonoBehaviour:
     you can pass this one.
   choices:
   - next: {fileID: 11400000, guid: a0a3753bb7ddf7d41afc703ffa563db0, type: 2}
-    choiceText: Not if I transform
+    choiceText: Not if I transform!
     prerequisite: 
   - next: {fileID: 0}
-    choiceText: You're right
+    choiceText: You're right.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
