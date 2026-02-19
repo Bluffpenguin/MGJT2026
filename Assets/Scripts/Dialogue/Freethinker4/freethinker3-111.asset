@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker4-2
+  m_Name: freethinker3-111
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Oh, do I, now? Be thar any other obvious facts dat ye would like ta point
-    out?
+  text: '''Preciate it, landlubber.'
   choices:
   - next: {fileID: 0}
-    choiceText: No, captain.
+    choiceText: Leave.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

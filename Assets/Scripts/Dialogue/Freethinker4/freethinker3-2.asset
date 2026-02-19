@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker4-1
+  m_Name: freethinker3-2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Well, tisn't just any cave. Tis the cave where I met me fav'rit pet! An where
-    I had ta bury the poor ole soul...
+  text: Oh, do I, now? Be thar any other obvious facts dat ye would like ta point
+    out?
   choices:
-  - next: {fileID: 11400000, guid: c7e49f2e3f9942842b648e973d5f1e42, type: 2}
-    choiceText: What kind of pet was it?
+  - next: {fileID: 0}
+    choiceText: No, captain.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
