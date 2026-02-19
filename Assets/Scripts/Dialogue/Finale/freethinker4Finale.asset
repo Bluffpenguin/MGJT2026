@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
   text: Ahoy! I was glad t'ave the pleasure o conversin wit ye. Fair winds for that
-    last man, laddie.
+    last man, boy.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

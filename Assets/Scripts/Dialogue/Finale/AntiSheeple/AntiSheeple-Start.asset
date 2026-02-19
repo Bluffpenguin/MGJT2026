@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker6Finale
+  m_Name: AntiSheeple-Start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: Good luck with the final man, friend. He listeneth to no man.
+  speakerName: Sheeple
+  text: So you're the one convincing everyone of inane transformation nonsense. I
+    won't believe it until I see it.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

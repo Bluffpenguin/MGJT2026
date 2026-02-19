@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker2-Start
+  m_Name: AntiSheeple-3 1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: I don't know... What's the point of going on?
+  speakerName: Sheeple
+  text: If this is real, why do you stick out like a sore thumb? It's weird. Would
+    you stay where you don't belong?
   choices:
-  - next: {fileID: 11400000, guid: 5beab54952327a445a90ce6356bf9bc2, type: 2}
-    choiceText: Have fun.
+  - next: {fileID: 11400000, guid: cd7871705cc76524d8872fb229b1c33b, type: 2}
+    choiceText: I want to stay.
     prerequisite: 
-  - next: {fileID: 11400000, guid: be343f136fdfdae459d051b39931b700, type: 2}
-    choiceText: Make connections.
+  - next: {fileID: 11400000, guid: 8811fa6ae1d42af47817f136aa0b9898, type: 2}
+    choiceText: I don't want to stay.
     prerequisite: 
-  - next: {fileID: 11400000, guid: 15943ab34ac916f41a582fecf83334b5, type: 2}
-    choiceText: Eat bugs.
+  - next: {fileID: 11400000, guid: dbe6aae4304aaf446b8876ecdf7355ab, type: 2}
+    choiceText: I changed my mind.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
