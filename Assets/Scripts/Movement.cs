@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     // Transformations
     enum Form
     {
-        Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane
+        Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane, Hammer
     }
     [SerializeField] Form currentForm = Form.Man;
     [SerializeField] bool transforming = false;
@@ -54,7 +54,20 @@ public class Movement : MonoBehaviour
         {
             Transform("Shovel");
         }
-        if (transforming) canMove = false;
+		if (Keyboard.current.iKey.wasPressedThisFrame)
+		{
+			Transform("Hammer");
+		}
+		if (Keyboard.current.oKey.wasPressedThisFrame)
+		{
+			Transform("Frog");
+		}
+		if (Keyboard.current.yKey.wasPressedThisFrame)
+		{
+			Transform("Man");
+		}
+
+		if (transforming) canMove = false;
 		if (!canMove) return;
 
 		if (interaction.WasPressedThisFrame())
@@ -106,6 +119,12 @@ public class Movement : MonoBehaviour
             case "Apathy":
                 currentForm = Form.Apathy;
                 break;
+            case "Frog":
+                currentForm = Form.Frog;
+                break;
+            case "Hammer":
+                currentForm = Form.Hammer;
+                break;
             default: 
                 break;
         }
@@ -124,14 +143,22 @@ public class Movement : MonoBehaviour
                 spriteRenderer.sprite = transformSprites[1];
 				break;
 			case Form.Brakes:
+                spriteRenderer.sprite = transformSprites[2];
 				break;
 			case Form.Fly:
+				spriteRenderer.sprite = transformSprites[3];
 				break;
 			case Form.Apathy:
+				spriteRenderer.sprite = transformSprites[4];
 				break;
 			case Form.Frog:
+				spriteRenderer.sprite = transformSprites[5];
 				break;
 			case Form.Airplane:
+				spriteRenderer.sprite = transformSprites[6];
+				break;
+            case Form.Hammer:
+				spriteRenderer.sprite = transformSprites[7];
 				break;
             default:
                 break;

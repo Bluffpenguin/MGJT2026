@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 12a0f9911685de94ca132cb8a708dc7f
+guid: 71b2f49ee0168af4bb0ade3f1134249c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5653367829932592515
-    second: tempShovel_0
+      213: 1611165887040371254
+    second: transform_fighter_jet_figher_jet_figher_jet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tempShovel_0
+      name: transform_fighter_jet_figher_jet_figher_jet_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 139
-        width: 549
-        height: 849
+        x: 28
+        y: 16
+        width: 1014
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38dc0c7a61cc47e40800000000000000
-      internalID: 5653367829932592515
+      spriteID: 63ab44386d20c5610800000000000000
+      internalID: 1611165887040371254
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tempShovel_0: 5653367829932592515
+      transform_fighter_jet_figher_jet_figher_jet_0: 1611165887040371254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
