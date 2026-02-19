@@ -29,7 +29,18 @@ public class DialogueBox : MonoBehaviour
     bool opened = false;
     Dialogue currentDialogue;
 
-    [Header("Debug")]
+    [Header("Dialogue Bob")]
+    [SerializeField] float bobVariance = 4;
+    float defBoxY;
+    float[] defChoicesY = new float[5];
+    [SerializeField] float bobSpeed = 8;
+    [SerializeField] float choiceOffsetY = 50;
+	[SerializeField] float choiceOffsetX = 100;
+	bool goingUp = false;
+
+
+
+	[Header("Debug")]
     [SerializeField] Dialogue debugMessage;
 
     private void Awake()
@@ -39,9 +50,11 @@ public class DialogueBox : MonoBehaviour
         EventManager.OpenDialogueBox.AddListener(OpenMenu);
         EventManager.CloseDialogueBox.AddListener(CloseMenu);
         textSpeed = TEXT_SPEED;
-		foreach (var choice in choiceButtons)
-		{
-			choice.gameObject.SetActive(false);
+        for (int i = 0; i <choiceButtons.Length; i++)
+        {
+            choiceButtons[i].gameObject.SetActive(false);
+            defChoicesY[i] = choiceButtons[i].transform.position.y;
+
 		}
         dialoguePanel.gameObject.SetActive(false);
 	}
@@ -49,7 +62,7 @@ public class DialogueBox : MonoBehaviour
 	void Start()
     {
         textBox.text = string.Empty;
-
+        defBoxY = dialoguePanel.transform.position.y;
     }
 
     // Update is called once per frame
@@ -80,6 +93,25 @@ public class DialogueBox : MonoBehaviour
             {
                 textSpeed = TEXT_SPEED / 2;
             }
+        }
+
+        // Dialogue Box Bobing
+        if (goingUp)
+        {
+            dialoguePanel.transform.position += new Vector3(0, bobSpeed * Time.deltaTime, 0);
+        }
+        else
+        {
+            dialoguePanel.transform.position -= new Vector3(0, bobSpeed * Time.deltaTime, 0);
+        }
+
+        if (dialoguePanel.transform.position.y < defBoxY - bobVariance)
+        {
+            goingUp = true;
+        }
+        else if (dialoguePanel.transform.position.y > defBoxY + bobVariance)
+        {
+            goingUp = false;
         }
 	}
 
@@ -134,6 +166,7 @@ public class DialogueBox : MonoBehaviour
 
         for (int i = 0; i < dialogue.choices.Count && i < choiceButtons.Length; i++)
         {
+            choiceButtons[i].transform.position += new Vector3(UnityEngine.Random.Range(-choiceOffsetX, choiceOffsetX), UnityEngine.Random.Range(-choiceOffsetY, choiceOffsetY));
             // Check if the option has a prerequisite
             if (dialogue.choices[i].prerequisite != "")
             {
