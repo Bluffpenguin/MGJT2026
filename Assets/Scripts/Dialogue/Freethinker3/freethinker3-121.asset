@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker3-121
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Stressed Worker
-  text: GOOD TO SEE SOMEONE WITH COMMON SENSE. YOU HIT IT RIGHT ON THE HEAD.
+  text: FINALLY, SOMEONE WITH COMMON SENSE. YOU HIT IT RIGHT ON THE HEAD.
   choices:
   - next: {fileID: 11400000, guid: cc2d23e856b563b47a3d5c1e3811bb6a, type: 2}
     choiceText: Hitting?
