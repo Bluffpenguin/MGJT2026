@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AntiSheepleConvo : MonoBehaviour
@@ -11,13 +13,21 @@ public class AntiSheepleConvo : MonoBehaviour
 		Intro, Untransformed, Transformed
 	}
 	Stage currentStage = Stage.Intro;
-	[SerializeField] GameObject prompt;
+	[SerializeField] GameObject prompt, shineVFX;
+	[SerializeField] Transform shineVFXTransform;
+	[SerializeField] AudioClip transformSFX;
+	float finalScale = 0.3f;
+	float transformTime = 0.75f;
+	[SerializeField] SpriteRenderer spriteRenderer;
+	[SerializeField] Sprite blobSprite;
 	bool waitingForDialogueToEnd = false;
 
 	private void Awake()
 	{
 		EventManager.CloseDialogueBox.AddListener(OnConversationEnd);
 		EventManager.PlayerTalk.AddListener(OnConversationStart);
+		EventManager.BecomeBlob.AddListener(BecomeBlob);
+
 	}
 
 	public void OnTriggerEnter2D(Collider2D other)
@@ -92,9 +102,48 @@ public class AntiSheepleConvo : MonoBehaviour
 				break;
 		}
 		
-		
-		
 
+	}
 
+	void BecomeBlob()
+	{
+		AudioManager.instance.UI_One_Shot(transformSFX, 1);
+		StartCoroutine(BeBlob());
+	}
+
+	IEnumerator BeBlob()
+	{
+		shineVFXTransform.localScale = Vector3.zero;
+		shineVFX.SetActive(true);
+		Vector3 startScale = shineVFXTransform.localScale;
+		Vector3 endScale = Vector3.one * finalScale;
+		float elaspedTime = 0;
+
+		while (elaspedTime < transformTime)
+		{
+			float t = elaspedTime / transformTime;
+
+			shineVFXTransform.localScale = Vector3.Lerp(startScale, endScale, t);
+			elaspedTime += Time.deltaTime;
+			yield return null;
+		}
+		shineVFXTransform.localScale = endScale;
+		yield return new WaitForSeconds(0.5f);
+		Debug.Log("First Half");
+		spriteRenderer.sprite = blobSprite;
+
+		elaspedTime = 0;
+
+		while (elaspedTime < transformTime)
+		{
+			float t = elaspedTime / transformTime;
+
+			shineVFXTransform.localScale = Vector3.Lerp(endScale, startScale, t);
+			elaspedTime += Time.deltaTime;
+			yield return null;
+		}
+		shineVFXTransform.localScale = Vector3.zero;
+		shineVFX.SetActive(false);
+		
 	}
 }

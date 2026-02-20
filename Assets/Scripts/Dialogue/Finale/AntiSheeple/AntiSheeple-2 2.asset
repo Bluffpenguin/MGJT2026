@@ -17,4 +17,4 @@ MonoBehaviour:
   choices: []
   next: {fileID: 11400000, guid: d37f6bbc643aad64dbd1328eb49bdf65, type: 2}
   wordUnlock: 
-  transformation: 
+  transformation: Blob

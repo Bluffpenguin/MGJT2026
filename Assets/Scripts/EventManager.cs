@@ -10,6 +10,7 @@ static public class EventManager
     // Dialogue Choices
     static public UnityEvent<string> Transformation = new();
     static public UnityEvent FinalePostIntro = new();
+    static public UnityEvent BecomeBlob = new();
 
 
 	//Endings

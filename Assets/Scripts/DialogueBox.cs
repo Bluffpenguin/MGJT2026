@@ -269,6 +269,11 @@ public class DialogueBox : MonoBehaviour
         {
             KeywordLibrary.LearnWord.Invoke(currentDialogue.wordUnlock);
         }
+
+        if (currentDialogue.transformation == "Blob")
+        {
+            EventManager.BecomeBlob.Invoke();
+        }
     }
 
 	IEnumerator TypeLine(string dialogue)
