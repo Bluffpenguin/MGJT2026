@@ -15,13 +15,13 @@ MonoBehaviour:
   speakerName: Sheeple
   text: Bet. As if you could transform into something useful!
   choices:
-  - next: {fileID: 11400000, guid: 9472d9e61a933d2428ccc9c27e82e986, type: 2}
+  - next: {fileID: 11400000, guid: cc50a27c4ccd3f341a2fa7c9a9b0e896, type: 2}
     choiceText: A <color=red>frog</color>!
     prerequisite: frog
-  - next: {fileID: 11400000, guid: 9472d9e61a933d2428ccc9c27e82e986, type: 2}
+  - next: {fileID: 11400000, guid: 7ba765d7fd3330440b26d1cb20a6125b, type: 2}
     choiceText: <color=red>Apathy</color>!
     prerequisite: apathy
-  - next: {fileID: 11400000, guid: 9472d9e61a933d2428ccc9c27e82e986, type: 2}
+  - next: {fileID: 11400000, guid: ce59177453e6ad447b7b85df422a26fc, type: 2}
     choiceText: <color=red>Brakes</color>!
     prerequisite: brakes
   - next: {fileID: 11400000, guid: 9472d9e61a933d2428ccc9c27e82e986, type: 2}

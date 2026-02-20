@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: sheeple1-2
+  m_Name: sheeple1-2Fly
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
-  text: I totally believe you!
+  speakerName: 
+  text: 
   choices: []
   next: {fileID: 0}
   wordUnlock: 
-  transformation: 
+  transformation: fly

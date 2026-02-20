@@ -47,7 +47,22 @@ public class AntiSheepleConvo : MonoBehaviour
 		if (!waitingForDialogueToEnd) EventManager.UnfreezePlayer.Invoke();
 		if (waitingForDialogueToEnd)
 		{
-			EventManager.EndFade.Invoke();
+			if (KeywordLibrary.instance.Check("realStay"))
+			{
+				EventManager.RealStay.Invoke();
+			}
+			else if (KeywordLibrary.instance.Check("realGo"))
+			{
+				EventManager.RealGo.Invoke();
+			}
+			else if (KeywordLibrary.instance.Check("fakeStay"))
+			{
+				EventManager.FakeStay.Invoke();
+			}
+			else if (KeywordLibrary.instance.Check("fakeGo"))
+			{
+				EventManager.FakeGo.Invoke();
+			}
 		}
 	}
 
@@ -70,7 +85,6 @@ public class AntiSheepleConvo : MonoBehaviour
 				break;
 			case Stage.Untransformed:
 				EventManager.OpenDialogueBox.Invoke(diag2);
-				EventManager.FinalePostIntro.Invoke();
 				break;
 			case Stage.Transformed:
 				EventManager.OpenDialogueBox.Invoke(diag3);
