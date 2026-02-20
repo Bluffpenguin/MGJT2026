@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
-  m_Name: freethinker6-11311
+  m_Name: sheeple3-Encore
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: The babbling of the brook, the glimmering sheen of a well-polished pauldron,
-    or the flickering of a torch casting shadows upon a wall...
-  choices: []
-  next: {fileID: 11400000, guid: 2373bf07abd2cc34191847d5884f2615, type: 2}
+  speakerName: Sheeple
+  text: I guess you want to transform again.
+  choices:
+  - next: {fileID: 11400000, guid: a0a3753bb7ddf7d41afc703ffa563db0, type: 2}
+    choiceText: Not if I transform!
+    prerequisite: 
+  - next: {fileID: 0}
+    choiceText: You're right.
+    prerequisite: 
+  next: {fileID: 0}
   wordUnlock: 
   transformation: 

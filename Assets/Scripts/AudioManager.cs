@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("Dialog Sound Settings")]
     [SerializeField] AudioSource typewritter_Source;
+
+    [SerializeField] AudioClip dialogBlip;
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	private void Awake()
 	{
@@ -27,7 +29,12 @@ public class AudioManager : MonoBehaviour
         ui_Source.PlayOneShot(clip, vol);
     }
 
-    public void UI_Change_Volume(float vol)
+	public void Dialogue_Blip()
+	{
+		ui_Source.PlayOneShot(dialogBlip, 1);
+	}
+
+	public void UI_Change_Volume(float vol)
     {
         ui_Source.volume = vol;
     }
