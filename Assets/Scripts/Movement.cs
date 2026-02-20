@@ -31,7 +31,8 @@ public class Movement : MonoBehaviour
     [SerializeField] float transformTime = 1;
 
     [Header("Hammer Movement")]
-    [SerializeField] float hamRotSpeedX=2, hamRotSpeedZ=2;
+    [SerializeField] float hamRotSpeedX = 2;
+    [SerializeField] float hamRotSpeedZ=2;
 
     [Header("Battleaxe Movement")]
     [SerializeField] Sprite altAxeSprite;
@@ -46,9 +47,10 @@ public class Movement : MonoBehaviour
         EventManager.Transformation.AddListener(Transform);
         EventManager.ShowPlayer.AddListener(ShowPlayer);
         EventManager.HidePlayer.AddListener(HidePlayer);
+        EventManager.RevertForm.AddListener(RevertForm);
 
         // Components
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 	  }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,7 +58,7 @@ public class Movement : MonoBehaviour
         MoveAction.Enable();
         interaction.Enable();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
 	// Update is called once per frame
@@ -112,6 +114,14 @@ public class Movement : MonoBehaviour
 	}
 
 	#region Transformation
+
+    void RevertForm()
+    {
+        if (currentForm != Form.Man)
+        {
+            Transform("man");
+        }
+    }
 
 	void Transform(string newForm)
     {
@@ -230,24 +240,67 @@ public class Movement : MonoBehaviour
 				animator.SetFloat("InputY", move.y);
 				break;
 			case Form.Shovel:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Brakes:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Fly:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Apathy:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Frog:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Airplane:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Hammer:
+                /*
 				if (move.x > 0.1)
                 {
                     spriteRenderer.transform.Rotate(Vector3.forward, -hamRotSpeedZ, Space.Self);
@@ -265,12 +318,35 @@ public class Movement : MonoBehaviour
 				{
 					spriteRenderer.transform.Rotate(Vector3.left, -hamRotSpeedX, Space.Self);
 				}
-				break;
+                */
+                if (move.x > 0.1)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else if (move.x < -0.1)
+                {
+                    spriteRenderer.flipX = true;
+                }
+                    break;
 			case Form.Malamute:
-		
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Wheelbarrow:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Battleaxe:
                 if (!transforming)
@@ -290,9 +366,24 @@ public class Movement : MonoBehaviour
 				
 				break;
 			case Form.Sarmale:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
             case Form.Potatoe:
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			default:
 				break;
