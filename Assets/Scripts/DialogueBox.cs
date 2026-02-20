@@ -251,7 +251,7 @@ public class DialogueBox : MonoBehaviour
 
 	void StartDialogue(string dialogue)
 	{
-		if (AudioManager.instance) AudioManager.instance.TW_Checker();
+		//if (AudioManager.instance) AudioManager.instance.TW_Checker();
         fastText = false;
 		StopAllCoroutines();
 		textBox.text = string.Empty;
@@ -288,9 +288,15 @@ public class DialogueBox : MonoBehaviour
             }
 
             // Don't space html functions
-			if (!printingHtmlfunc) yield return new WaitForSeconds(textSpeed);
+            if (!printingHtmlfunc)
+            {
+                // Don't play soundbite if instantaneous
+                if (textSpeed > TEXT_SPEED / 4) AudioManager.instance.Dialogue_Blip();
+
+				yield return new WaitForSeconds(textSpeed);
+            }
 		}
-		if (AudioManager.instance) AudioManager.instance.TW_Stop();
+		//if (AudioManager.instance) AudioManager.instance.TW_Stop();
 		yield return new WaitForSeconds(0.5f);
 		finishedDialogue = true;
         
