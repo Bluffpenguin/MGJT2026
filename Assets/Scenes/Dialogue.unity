@@ -37029,6 +37029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1960002684473032562, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7955819631750886615, guid: b86a752bd8d1ab0418973c90367020b8, type: 3}
     - target: {fileID: 2376755751910735263, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
       propertyPath: m_Name
       value: DirtHoleEnd
@@ -60179,6 +60183,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1960002684473032562, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7955819631750886615, guid: b86a752bd8d1ab0418973c90367020b8, type: 3}
     - target: {fileID: 2376755751910735263, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
       propertyPath: m_Name
       value: DirtHole
