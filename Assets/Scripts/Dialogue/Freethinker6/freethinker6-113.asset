@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-113
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: I think thou art correct. It is a somewhat dull answer, unfortunately.
+  speakerName: Old-timey Knight
+  text: I think thou art correct. Tis a somewhat dull answer, unfortunately.
   choices:
   - next: {fileID: 11400000, guid: e1ef778a25c93f04998674ee38590702, type: 2}
-    choiceText: Life is often dull.
+    choiceText: Life is dull.
     prerequisite: 
   - next: {fileID: 0}
-    choiceText: Come on, dude.
+    choiceText: Come on, man.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

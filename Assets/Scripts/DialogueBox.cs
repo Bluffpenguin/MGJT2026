@@ -11,6 +11,7 @@ public class DialogueBox : MonoBehaviour
     public static DialogueBox instance;
 
     [SerializeField] internal Button[] choiceButtons;
+    Vector3[] choiceDefaultPositions = new Vector3[5];
     [SerializeField] internal TextMeshProUGUI textBox, speakerText;
     [SerializeField] internal GameObject dialoguePanel;
 
@@ -60,6 +61,7 @@ public class DialogueBox : MonoBehaviour
         {
             choiceButtons[i].gameObject.SetActive(false);
             defChoicesY[i] = choiceButtons[i].transform.position.y;
+            choiceDefaultPositions[i] = choiceButtons[i].transform.localPosition;
 
 		}
         dialoguePanel.gameObject.SetActive(false);
@@ -176,9 +178,11 @@ public class DialogueBox : MonoBehaviour
     {
         StartDialogue(dialogue.text);
 
+
         for (int i = 0; i < dialogue.choices.Count && i < choiceButtons.Length; i++)
         {
-            choiceButtons[i].transform.position += new Vector3(UnityEngine.Random.Range(-choiceOffsetX, choiceOffsetX), UnityEngine.Random.Range(-choiceOffsetY, choiceOffsetY));
+            choiceButtons[i].transform.localPosition = choiceDefaultPositions[i];
+            choiceButtons[i].transform.localPosition += new Vector3(UnityEngine.Random.Range(-choiceOffsetX, choiceOffsetX), UnityEngine.Random.Range(-choiceOffsetY, choiceOffsetY));
             // Check if the option has a prerequisite
             if (dialogue.choices[i].prerequisite != "")
             {
@@ -251,7 +255,7 @@ public class DialogueBox : MonoBehaviour
 
 	void StartDialogue(string dialogue)
 	{
-		if (AudioManager.instance) AudioManager.instance.TW_Checker();
+		//if (AudioManager.instance) AudioManager.instance.TW_Checker();
         fastText = false;
 		StopAllCoroutines();
 		textBox.text = string.Empty;
@@ -264,6 +268,11 @@ public class DialogueBox : MonoBehaviour
         if (currentDialogue.wordUnlock != "")
         {
             KeywordLibrary.LearnWord.Invoke(currentDialogue.wordUnlock);
+        }
+
+        if (currentDialogue.transformation == "Blob")
+        {
+            EventManager.BecomeBlob.Invoke();
         }
     }
 
@@ -288,9 +297,15 @@ public class DialogueBox : MonoBehaviour
             }
 
             // Don't space html functions
-			if (!printingHtmlfunc) yield return new WaitForSeconds(textSpeed);
+            if (!printingHtmlfunc)
+            {
+                // Don't play soundbite if instantaneous
+                if (textSpeed > TEXT_SPEED / 4) AudioManager.instance.Dialogue_Blip();
+
+				yield return new WaitForSeconds(textSpeed);
+            }
 		}
-		if (AudioManager.instance) AudioManager.instance.TW_Stop();
+		//if (AudioManager.instance) AudioManager.instance.TW_Stop();
 		yield return new WaitForSeconds(0.5f);
 		finishedDialogue = true;
         

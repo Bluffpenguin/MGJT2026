@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: sheeple2-Encore
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: A once skeptic person
+  text: Sure, I believe you can transform again.
+  choices:
+  - next: {fileID: 11400000, guid: cc50a27c4ccd3f341a2fa7c9a9b0e896, type: 2}
+    choiceText: A <color=red>frog</color>!
+    prerequisite: frog
+  - next: {fileID: 11400000, guid: 7ba765d7fd3330440b26d1cb20a6125b, type: 2}
+    choiceText: <color=red>Apathy</color>!
+    prerequisite: apathy
+  - next: {fileID: 11400000, guid: ce59177453e6ad447b7b85df422a26fc, type: 2}
+    choiceText: <color=red>Brakes</color>!
+    prerequisite: brakes
+  - next: {fileID: 11400000, guid: 9472d9e61a933d2428ccc9c27e82e986, type: 2}
+    choiceText: A <color=red>hammer</color>!
+    prerequisite: hammer
+  - next: {fileID: 0}
+    choiceText: Wait, nevermind...
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 

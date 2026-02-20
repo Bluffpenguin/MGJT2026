@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-1121
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: Peraventure so, but folk tend to speak of cows more than they speak of goats.
-    That is somewhat strange of thee.
+  speakerName: Old-timey Knight
+  text: Peraventure so, but folk tend to speak of cows more than of goats. Tis somewhat
+    strange of thee.
   choices:
   - next: {fileID: 0}
     choiceText: I guess.

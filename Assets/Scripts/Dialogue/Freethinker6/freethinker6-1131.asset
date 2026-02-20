@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-1131
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: Life may sometime be dull, but there are moments of beauty hidden all about
-    for those that have eyes to see. I seek such beauty.
+  speakerName: Old-timey Knight
+  text: Life may be dull, but there are moments of beauty hidden all about for those
+    that have eyes to see. I seek such beauty.
   choices:
-  - next: {fileID: 11400000, guid: 2d608f3446271b04d8638c2c6cf950de, type: 2}
-    choiceText: What beauty have you found?
+  - next: {fileID: 11400000, guid: ed8f13a68f8b50a44a754200a4818185, type: 2}
+    choiceText: Beauty?
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

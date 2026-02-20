@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: AntiSheeple-3 2
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: The Anti-Sheeple
+  text: I agree. We are in a dream, in your subconscious. And yet, you're here. Do
+    you prefer this over reality?
+  choices:
+  - next: {fileID: 11400000, guid: 7a001bf8dbc73fd4988c8a23dc55e05c, type: 2}
+    choiceText: I want to stay.
+    prerequisite: 
+  - next: {fileID: 11400000, guid: 0e9851fc3a2e83d42a43d7ab31825020, type: 2}
+    choiceText: I don't want to stay.
+    prerequisite: 
+  - next: {fileID: 11400000, guid: dbe6aae4304aaf446b8876ecdf7355ab, type: 2}
+    choiceText: I changed my mind.
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 

@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-11
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: Hast thou a guess?
+  speakerName: Old-timey Knight
+  text: A vessel have I, that is round as a pear, moist in the middle, surrounded
+    with hair; and often it happens, that water flows there.
   choices:
   - next: {fileID: 11400000, guid: 6111e89ae1b51e94abb3b3fc1121eaeb, type: 2}
-    choiceText: A coconut
+    choiceText: A coconut.
     prerequisite: 
   - next: {fileID: 11400000, guid: 25c2d560cda19584faaf760c15fde224, type: 2}
-    choiceText: A goat udder
+    choiceText: A goat udder.
     prerequisite: 
   - next: {fileID: 11400000, guid: f0ac0d3ab8723a245a44b558d681a9c5, type: 2}
-    choiceText: An eyeball
+    choiceText: An eyeball.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

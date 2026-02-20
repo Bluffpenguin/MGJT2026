@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker5Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: Sinfully, the last one will not listen to you. To my mother I will say hello
+  speakerName: Blunt Balkan
+  text: Sinfully, the last one will not listen to you. To my mama I will say hello
     for you.
   choices: []
   next: {fileID: 0}

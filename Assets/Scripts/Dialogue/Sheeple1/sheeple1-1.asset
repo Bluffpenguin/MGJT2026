@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple1-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: A gullible person
   text: Really? What can you transform into?
   choices:
-  - next: {fileID: 11400000, guid: 8c1c69cd1d501874098d126ba833998f, type: 2}
-    choiceText: A <color=red>potatoe</color>!
+  - next: {fileID: 11400000, guid: a9a4b5b7ae8d7ee41be81535356d8141, type: 2}
+    choiceText: A <color=red>potato</color>!
     prerequisite: potatoe
-  - next: {fileID: 11400000, guid: 5af60588d10d0124badf5e266575073c, type: 2}
+  - next: {fileID: 11400000, guid: a06900abfbcabc1488763920c59be1ae, type: 2}
     choiceText: An <color=red>airplane</color>!
     prerequisite: airplane
-  - next: {fileID: 11400000, guid: 6968240c5fa75644889f0f5bb500c4b7, type: 2}
+  - next: {fileID: 11400000, guid: 10ebbaa46df4f92469a86d322bec24a7, type: 2}
     choiceText: A <color=red>fly</color>!
     prerequisite: fly
-  - next: {fileID: 11400000, guid: b866f8fd61ce35244ba9b18380089607, type: 2}
-    choiceText: Nevermind
+  - next: {fileID: 0}
+    choiceText: Never mind.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

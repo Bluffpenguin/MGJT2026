@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker5-21
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: <color=red>Sarmale</color> are made from cabbage and pig meat. They are the
-    most delicious food on planet. You should to think more about <color=red>sarmale</color>.
+  speakerName: Blunt Balkan
+  text: Sarmale are made from cabbage and pig meat. They are the most delicious food.
+    You should to think more about sarmale.
   choices:
   - next: {fileID: 0}
     choiceText: Okay.

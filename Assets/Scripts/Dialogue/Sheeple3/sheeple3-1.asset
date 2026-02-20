@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple3-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
-  text: Dude, even if you can transform... What's gonna be able to pass this thing?
+  speakerName: A pretty convinced person
+  text: Dude, even if you can transform... What could bypass this thing?
   choices:
-  - next: {fileID: 11400000, guid: 854904183d4b0b049b2493372b94227a, type: 2}
-    choiceText: An <color=red>enchanted battle axe</color>.
+  - next: {fileID: 11400000, guid: 1136b5ed5e7852345b0c395bb65a9373, type: 2}
+    choiceText: A <color=red>battle axe</color>.
     prerequisite: battleaxe
-  - next: {fileID: 11400000, guid: e7da870fbf71a21418f76a201a70403c, type: 2}
+  - next: {fileID: 11400000, guid: 1f55867e4b15fe5498ef7e3fe6e9b419, type: 2}
     choiceText: A <color=red>wheelbarrow</color>.
     prerequisite: wheelbarrow
-  - next: {fileID: 11400000, guid: a26483c4c7d41c94c87a82a370603223, type: 2}
-    choiceText: A <color=red>wee malamute<color>.
+  - next: {fileID: 11400000, guid: 0c22ba5deba13b549ac6fcecbb001ef2, type: 2}
+    choiceText: A <color=red>malamute</color>.
     prerequisite: malamute
-  - next: {fileID: 11400000, guid: 52e9c63115175d8479d004bdad92304f, type: 2}
+  - next: {fileID: 11400000, guid: f603e3f9874d11b41b1aa599f99d7ebe, type: 2}
     choiceText: A <color=red>shovel</color>.
     prerequisite: shovel
   - next: {fileID: 0}

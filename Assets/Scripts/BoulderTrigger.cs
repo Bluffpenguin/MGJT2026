@@ -5,7 +5,8 @@ public class BoulderTrigger : MonoBehaviour
 	bool playerInRange = false;
 	GameObject player;
 	[SerializeField] GameObject prompt;
-	[SerializeField] AudioClip failSFX;
+	[SerializeField] AudioClip failSFX, breakSFX;
+	[SerializeField] Transform[] rockSprites;
 
 	private void Awake()
 	{
@@ -47,7 +48,14 @@ public class BoulderTrigger : MonoBehaviour
 
 	void BreakRocks()
 	{
-		// Temp
-		transform.parent.gameObject.SetActive(false);
+		AudioManager.instance.UI_One_Shot(breakSFX, 1);
+		foreach(var rock in rockSprites)
+		{
+			rock.localScale -= new Vector3(0.2f, 0.2f, 0.2f);
+		}
+		if (rockSprites[0].localScale.x <= 0.1)
+		{
+			transform.parent.gameObject.SetActive(false);
+		}
 	}
 }

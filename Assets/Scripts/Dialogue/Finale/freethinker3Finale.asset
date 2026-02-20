@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker3Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: I'M STILL WORKING HARD. YOU DIDN'T CHANGE ANYTHING FOR ME. GOOD LUCK ON THE
-    LAST GUY.
+  speakerName: Stressed Workaholic
+  text: YOU DIDN'T CHANGE ANYTHING FOR ME. GOOD LUCK ON THE LAST GUY.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

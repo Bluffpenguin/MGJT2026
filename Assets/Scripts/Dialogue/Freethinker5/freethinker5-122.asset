@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker5-122
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: The word does not come to me... a <color=red>wheelbarrow</color>?
+  speakerName: Blunt Balkan
+  text: Can be... a <color=red>wheelbarrow</color>?
   choices:
   - next: {fileID: 0}
     choiceText: Good job.
     prerequisite: 
   - next: {fileID: 11400000, guid: d808470b727a96840baf9258da6c5083, type: 2}
-    choiceText: I don't think that's it.
+    choiceText: I don't think so.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: wheelbarrow

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-Starter
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: 'Hail. I was wondering if thou couldst help me with a riddle that ails me:'
+  speakerName: Old-timey Knight
+  text: Hail. Couldst thou help me with a riddle that ails me?
   choices: []
-  next: {fileID: 11400000, guid: 8b448a12f827af54eafd2301cd3bb146, type: 2}
+  next: {fileID: 11400000, guid: f3463aa1e677a3a40bca663754d84bcd, type: 2}
   wordUnlock: 
   transformation: 

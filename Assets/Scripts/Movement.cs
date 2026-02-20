@@ -1,7 +1,5 @@
 using System.Collections;
-using UnityEditor.Callbacks;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
@@ -15,7 +13,7 @@ public class Movement : MonoBehaviour
     // Transformations
     public enum Form
     {
-        Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane, Hammer
+        Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane, Hammer, Malamute, Wheelbarrow, Battleaxe, Sarmale, Potatoe
     }
     [SerializeField] public Form currentForm = Form.Man;
     [SerializeField] bool transforming = false;
@@ -26,14 +24,26 @@ public class Movement : MonoBehaviour
     [Header("Transform Transition")]
     [SerializeField] GameObject shineVFXPrefab;
     [SerializeField] Transform shineVFXTransform;
-	[SerializeField] float startingScale = 0;
     [SerializeField] float finalScale = 0.4f;
     [SerializeField] float transformTime = 1;
+	[SerializeField] AudioClip transformSFX;
 
-    [Header("Hammer Movement")]
-    [SerializeField] float hamRotSpeedX=2, hamRotSpeedZ=2;
+    [Header("Battleaxe Movement")]
+    [SerializeField] Sprite altAxeSprite;
+    [SerializeField] float spriteInterval = 0.5f;
+    float elapsedTime = 0;
 
-    private void Awake()
+    [Header("Fly+Apathy Hover")]
+    [SerializeField] float hoverSpeed = 1;
+    [SerializeField] float bobOffsetY = 0.3f;
+	[SerializeField] float bobOffsetX = 0.25f;
+	[Header("Dog Bounce")]
+	[SerializeField] float bounceSpeed = 3;
+    bool bobbingUp = false, bobbingLeft = false;
+	Vector3 defSpritePosition;
+
+
+	private void Awake()
 	  {
         // Listeners
         EventManager.FreezePlayer.AddListener(freezeMovement);
@@ -41,6 +51,7 @@ public class Movement : MonoBehaviour
         EventManager.Transformation.AddListener(Transform);
         EventManager.ShowPlayer.AddListener(ShowPlayer);
         EventManager.HidePlayer.AddListener(HidePlayer);
+        EventManager.RevertForm.AddListener(RevertForm);
 
         // Components
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -51,29 +62,22 @@ public class Movement : MonoBehaviour
         MoveAction.Enable();
         interaction.Enable();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
+
+        defSpritePosition = spriteRenderer.transform.localPosition;
     }
 
 	// Update is called once per frame
 	private void Update()
 	{
-        //Debug
-        if (Keyboard.current.uKey.wasPressedThisFrame)
-        {
-            Transform("shovel");
-        }
-		if (Keyboard.current.iKey.wasPressedThisFrame)
+		if (Application.platform == RuntimePlatform.WindowsEditor)
 		{
-			Transform("hammer");
+			if (Keyboard.current.oKey.wasPressedThisFrame)
+			{
+				Transform("malamute");
+			}
 		}
-		if (Keyboard.current.oKey.wasPressedThisFrame)
-		{
-			Transform("frog");
-		}
-		if (Keyboard.current.yKey.wasPressedThisFrame)
-		{
-			Transform("man");
-		}
+		
 
 		if (transforming) canMove = false;
 		if (!canMove) return;
@@ -90,9 +94,7 @@ public class Movement : MonoBehaviour
         
         Vector2 move = MoveAction.ReadValue<Vector2>();
         rb.linearVelocity = move * speed;
-        animator.SetBool("IsWalking", true);
-        animator.SetFloat("InputX", move.x);
-        animator.SetFloat("InputY", move.y);
+        
         FormMovemenUpdate(move);
 
     }
@@ -100,7 +102,7 @@ public class Movement : MonoBehaviour
     void freezeMovement()
     {
         canMove = false;
-		rb.linearVelocity.Set(0, 0);
+        rb.linearVelocity = Vector2.zero;
 	}
 
 	void unfreezeMovement()
@@ -110,10 +112,20 @@ public class Movement : MonoBehaviour
 
 	#region Transformation
 
+    void RevertForm()
+    {
+        if (currentForm != Form.Man)
+        {
+            Transform("man");
+        }
+    }
+
 	void Transform(string newForm)
     {
-        transforming = true;
-        rb.linearVelocity.Set(0, 0);
+		AudioManager.instance.UI_One_Shot(transformSFX, 1);
+		transforming = true;
+        rb.linearVelocity = Vector2.zero;
+        animator.enabled = false;
         
         switch(newForm)
         {
@@ -142,6 +154,21 @@ public class Movement : MonoBehaviour
             case "hammer":
                 currentForm = Form.Hammer;
                 break;
+            case "wheelbarrow":
+                currentForm = Form.Wheelbarrow;
+                break;
+            case "battleaxe":
+                currentForm = Form.Battleaxe;
+                break;
+            case "malamute":
+                currentForm = Form.Malamute;
+                break;
+            case "sarmale":
+                currentForm = Form.Sarmale;
+                break;
+            case "potatoe":
+                currentForm = Form.Potatoe;
+                break;
             default: 
                 break;
         }
@@ -152,10 +179,13 @@ public class Movement : MonoBehaviour
     void ApplyTransform()
     {
 		spriteRenderer.transform.localRotation = Quaternion.identity;
+		spriteRenderer.transform.localPosition = defSpritePosition;
+        
 		switch (currentForm)
 		{
 			case Form.Man:
                 spriteRenderer.sprite = transformSprites[0];
+                animator.enabled = true;
 				break;
 			case Form.Shovel:
                 spriteRenderer.sprite = transformSprites[1];
@@ -178,6 +208,22 @@ public class Movement : MonoBehaviour
             case Form.Hammer:
 				spriteRenderer.sprite = transformSprites[7];
 				break;
+            case Form.Malamute:
+                spriteRenderer.sprite = transformSprites[8];
+                break;
+            case Form.Wheelbarrow:
+                spriteRenderer.sprite = transformSprites[9];
+                break;
+            case Form.Battleaxe:
+                spriteRenderer.sprite = transformSprites[10];
+                elapsedTime = 0;
+                break;
+            case Form.Sarmale:
+                spriteRenderer.sprite = transformSprites[11];
+                break;
+            case Form.Potatoe:
+                spriteRenderer.sprite = transformSprites[12];
+                break;
             default:
                 break;
 		}
@@ -188,27 +234,119 @@ public class Movement : MonoBehaviour
 		switch (currentForm)
 		{
 			case Form.Man:
-				
+				animator.SetBool("IsWalking", true);
+				animator.SetFloat("InputX", move.x);
+				animator.SetFloat("InputY", move.y);
 				break;
 			case Form.Shovel:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
 				break;
 			case Form.Brakes:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
 				break;
 			case Form.Fly:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				// Fly Bobbing
+				if (bobbingUp)
+				{
+					spriteRenderer.transform.localPosition += new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+				else
+				{
+					spriteRenderer.transform.localPosition -= new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+
+				if (spriteRenderer.transform.localPosition.y < defSpritePosition.y - bobOffsetY)
+				{
+					bobbingUp = true;
+				}
+				else if (spriteRenderer.transform.localPosition.y > defSpritePosition.y + bobOffsetY)
+				{
+					bobbingUp = false;
+				}
+
 				break;
 			case Form.Apathy:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				// Apathy Bobbing
+				if (bobbingUp)
+				{
+					spriteRenderer.transform.localPosition += new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+				else
+				{
+					spriteRenderer.transform.localPosition -= new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+
+				if (spriteRenderer.transform.localPosition.y < defSpritePosition.y - bobOffsetY)
+				{
+					bobbingUp = true;
+				}
+				else if (spriteRenderer.transform.localPosition.y > defSpritePosition.y + bobOffsetY)
+				{
+					bobbingUp = false;
+				}
+
 				break;
 			case Form.Frog:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
+
 				break;
 			case Form.Airplane:
-				
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
 				break;
 			case Form.Hammer:
+                /*
 				if (move.x > 0.1)
                 {
                     spriteRenderer.transform.Rotate(Vector3.forward, -hamRotSpeedZ, Space.Self);
@@ -226,14 +364,147 @@ public class Movement : MonoBehaviour
 				{
 					spriteRenderer.transform.Rotate(Vector3.left, -hamRotSpeedX, Space.Self);
 				}
+                */
+                if (move.x > 0.1)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else if (move.x < -0.1)
+                {
+                    spriteRenderer.flipX = true;
+                }
+				FormBobbing(move);
+				break;
+			case Form.Malamute:
+				if (move.x > 0.1) // face right
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1) // face left
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
+				
+
+				break;
+			case Form.Wheelbarrow:
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
+				break;
+			case Form.Battleaxe:
+                if (!transforming)
+                {
+                    elapsedTime += Time.fixedDeltaTime;
+                    if (elapsedTime > spriteInterval && spriteRenderer.sprite == transformSprites[10])
+                    {
+                        spriteRenderer.sprite = altAxeSprite;
+                        elapsedTime = 0;
+                    }
+                    else if (elapsedTime > spriteInterval)
+                    {
+                        spriteRenderer.sprite = transformSprites[10];
+                        elapsedTime = 0;
+                    }
+                }
+				FormBobbing(move);
+
+				break;
+			case Form.Sarmale:
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
+
+				break;
+            case Form.Potatoe:
+				if (move.x > 0.1)
+				{
+					spriteRenderer.flipX = false;
+				}
+				else if (move.x < -0.1)
+				{
+					spriteRenderer.flipX = true;
+				}
+
+				FormBobbing(move);
 				break;
 			default:
 				break;
 		}
 	}
 
+	void FormBobbing(Vector3 move)
+	{
+		if (move.x > 0.1 || move.x < -0.1) // If moving to the side, bob up
+		{
+			if (bobbingUp)
+			{
+				spriteRenderer.transform.localPosition += new Vector3(0, bounceSpeed * Time.fixedDeltaTime, 0);
+			}
+		}
+		else if (move.y > 0.1 || move.y < -0.1) // If moving up or down, bob left and right
+		{
+			if (!bobbingLeft)
+			{
+				spriteRenderer.transform.localPosition += new Vector3(bounceSpeed / 2 * Time.fixedDeltaTime, 0, 0);
+			}
+			else
+			{
+				spriteRenderer.transform.localPosition -= new Vector3(bounceSpeed / 2 * Time.fixedDeltaTime, 0, 0);
+			}
+		}
+		else
+		{
+			// Reset x-axis bobbing
+			spriteRenderer.transform.localPosition = new Vector3(0, spriteRenderer.transform.localPosition.y);
+		}
+
+		// Move back to default y
+		if (!bobbingUp)
+		{
+			spriteRenderer.transform.localPosition -= new Vector3(0, bounceSpeed * Time.fixedDeltaTime, 0);
+		}
+
+		//Check whether to bob up or down
+		if (spriteRenderer.transform.localPosition.y < defSpritePosition.y - bobOffsetY / 4)
+		{
+			bobbingUp = true;
+		}
+		else if (spriteRenderer.transform.localPosition.y > defSpritePosition.y + bobOffsetY)
+		{
+			bobbingUp = false;
+		}
+
+		// Check whether to bob left or right
+		if (spriteRenderer.transform.localPosition.x < defSpritePosition.x - bobOffsetX)
+		{
+			bobbingLeft = false;
+		}
+		else if (spriteRenderer.transform.localPosition.x > defSpritePosition.x + bobOffsetX)
+		{
+			bobbingLeft = true;
+		}
+	}
+
 	IEnumerator TransformTrasition()
     {
+		
         shineVFXTransform.localScale = Vector3.zero;
         Vector3 startScale = shineVFXTransform.localScale;
         Vector3 endScale = Vector3.one * finalScale;

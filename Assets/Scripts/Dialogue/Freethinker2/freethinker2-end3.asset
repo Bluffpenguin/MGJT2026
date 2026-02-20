@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker2-end3
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: To eat bugs...? Heh, I've never thought of it that way... Maybe <color=red>frogs</color>
+  speakerName: Depressed Nihilist
+  text: To eat bugs...? Hell, I've never thought of it that way... Maybe <color=red>frogs</color>
     are onto something...
   choices: []
   next: {fileID: 0}

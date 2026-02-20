@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
+  m_Name: sheeple3-Encore
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speakerName: A once pretty conviced person
+  text: I guess you want to transform again.
+  choices:
+  - next: {fileID: 11400000, guid: 1136b5ed5e7852345b0c395bb65a9373, type: 2}
+    choiceText: <color=Red>Battleaxe</color>
+    prerequisite: battleaxe
+  - next: {fileID: 11400000, guid: 0c22ba5deba13b549ac6fcecbb001ef2, type: 2}
+    choiceText: <color=Red>Malamute</color>
+    prerequisite: malamute
+  - next: {fileID: 11400000, guid: f603e3f9874d11b41b1aa599f99d7ebe, type: 2}
+    choiceText: <color=Red>Shovel</color>
+    prerequisite: shovel
+  - next: {fileID: 11400000, guid: 1f55867e4b15fe5498ef7e3fe6e9b419, type: 2}
+    choiceText: <color=Red>Wheelbarrow</color>!
+    prerequisite: wheelbarrow
+  - next: {fileID: 0}
+    choiceText: Nevermind.
+    prerequisite: 
+  next: {fileID: 0}
+  wordUnlock: 
+  transformation: 

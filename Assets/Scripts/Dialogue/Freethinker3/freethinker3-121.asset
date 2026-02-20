@@ -12,14 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker3-121
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: 'GOOD TO SEE SOMEONE WITH COMMON SENSE.
-
-    YOU HIT THE NAIL RIGHT ON THE
-    HEAD.'
+  speakerName: Stressed Worker
+  text: FINALLY, SOMEONE WITH COMMON SENSE. YOU HIT IT RIGHT ON THE HEAD.
   choices:
   - next: {fileID: 11400000, guid: cc2d23e856b563b47a3d5c1e3811bb6a, type: 2}
-    choiceText: What do you hit a nail with?
+    choiceText: Hitting?
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

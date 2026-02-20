@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker2-2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: 
-  text: To make connections...? What's the point if those connections will inevitably
-    be broken...?
+  speakerName: Depressed Nihilist
+  text: To make connections...? But all connections will inevitably be broken...
   choices:
   - next: {fileID: 11400000, guid: 6e99253dfd822994ba29e7e9aeb5166a, type: 2}
-    choiceText: What breaks them?
+    choiceText: Breaking?
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

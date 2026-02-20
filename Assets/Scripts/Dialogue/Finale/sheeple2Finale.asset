@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple2Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
-  text: Nice, I just won a bet that you would make it. I bet you could convince the
-    last guy too.
+  speakerName: A once skeptic person
+  text: Nice, I won a bet that you would make it. I bet you can convince the last
+    guy too.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

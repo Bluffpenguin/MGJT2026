@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-111
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
+  speakerName: Old-timey Knight
   text: If thou puttest the lime in the coconut, and shake it all up, dost thou think
-    of an actual song or but a memorable Coke ad from when thou wert a child?
+    of the song or a memorable Coke ad from when thou wert a child?
   choices:
   - next: {fileID: 11400000, guid: 271a21562fbad3d4098127b07de03983, type: 2}
-    choiceText: The song
+    choiceText: The song.
     prerequisite: 
   - next: {fileID: 11400000, guid: 5980266e61be9814db226ca18b6c8a63, type: 2}
-    choiceText: The Coke ad
+    choiceText: The Coke ad.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

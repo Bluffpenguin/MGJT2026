@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker2-Start
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: I just don't know anymore... What's the point of going on?
+  speakerName: Depressed Nihilist
+  text: I don't know... What's the point of going on?
   choices:
   - next: {fileID: 11400000, guid: 5beab54952327a445a90ce6356bf9bc2, type: 2}
     choiceText: Have fun.
     prerequisite: 
-  - next: {fileID: 0}
+  - next: {fileID: 11400000, guid: be343f136fdfdae459d051b39931b700, type: 2}
     choiceText: Make connections.
     prerequisite: 
-  - next: {fileID: 0}
+  - next: {fileID: 11400000, guid: 15943ab34ac916f41a582fecf83334b5, type: 2}
     choiceText: Eat bugs.
     prerequisite: 
   next: {fileID: 0}

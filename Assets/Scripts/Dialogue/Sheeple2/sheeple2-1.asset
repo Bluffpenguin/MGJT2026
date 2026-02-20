@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple2-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: A skeptic person
   text: Bet. As if you could transform into something useful!
   choices:
-  - next: {fileID: 11400000, guid: f1e00d08c6c1aa54db08eb5b2beda7c4, type: 2}
-    choiceText: A <color=red>frog</color>
+  - next: {fileID: 11400000, guid: cc50a27c4ccd3f341a2fa7c9a9b0e896, type: 2}
+    choiceText: A <color=red>frog</color>!
     prerequisite: frog
-  - next: {fileID: 11400000, guid: fa716945df8c5bb41a6597292486a5af, type: 2}
-    choiceText: <color=red>Apathy</color>
+  - next: {fileID: 11400000, guid: 7ba765d7fd3330440b26d1cb20a6125b, type: 2}
+    choiceText: <color=red>Apathy</color>!
     prerequisite: apathy
-  - next: {fileID: 11400000, guid: b46d23a943282f048bfb67df2267470c, type: 2}
-    choiceText: <color=red>Brakes</color>
+  - next: {fileID: 11400000, guid: ce59177453e6ad447b7b85df422a26fc, type: 2}
+    choiceText: <color=red>Brakes</color>!
     prerequisite: brakes
-  - next: {fileID: 11400000, guid: de30168c5466c5f48b1052f80f2cf2a9, type: 2}
-    choiceText: A <color=red>hammer</color>
+  - next: {fileID: 11400000, guid: 9472d9e61a933d2428ccc9c27e82e986, type: 2}
+    choiceText: A <color=red>hammer</color>!
     prerequisite: hammer
   - next: {fileID: 0}
     choiceText: Wait, nevermind...

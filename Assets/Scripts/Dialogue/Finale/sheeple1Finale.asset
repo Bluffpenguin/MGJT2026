@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple1Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
-  text: I knew you would make it! High-five! Now go convince the final dude!
+  speakerName: A once gullible person
+  text: I knew you would make it! High-five! Now go convince the last dude!
   choices: []
   next: {fileID: 0}
   wordUnlock: 
