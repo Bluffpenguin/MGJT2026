@@ -63,6 +63,6 @@ public class EndScreens : MonoBehaviour
 		fade.enabled = false;
 		yield return new WaitForSeconds(5);
 		selectedCanvas.SetActive(true);
-		SceneManager.LoadScene("");
+		SceneManager.LoadScene("MainMenu");
 	}
 }

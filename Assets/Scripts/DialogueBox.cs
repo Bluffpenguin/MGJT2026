@@ -11,6 +11,7 @@ public class DialogueBox : MonoBehaviour
     public static DialogueBox instance;
 
     [SerializeField] internal Button[] choiceButtons;
+    Vector3[] choiceDefaultPositions = new Vector3[5];
     [SerializeField] internal TextMeshProUGUI textBox, speakerText;
     [SerializeField] internal GameObject dialoguePanel;
 
@@ -60,6 +61,7 @@ public class DialogueBox : MonoBehaviour
         {
             choiceButtons[i].gameObject.SetActive(false);
             defChoicesY[i] = choiceButtons[i].transform.position.y;
+            choiceDefaultPositions[i] = choiceButtons[i].transform.localPosition;
 
 		}
         dialoguePanel.gameObject.SetActive(false);
@@ -176,9 +178,11 @@ public class DialogueBox : MonoBehaviour
     {
         StartDialogue(dialogue.text);
 
+
         for (int i = 0; i < dialogue.choices.Count && i < choiceButtons.Length; i++)
         {
-            choiceButtons[i].transform.position += new Vector3(UnityEngine.Random.Range(-choiceOffsetX, choiceOffsetX), UnityEngine.Random.Range(-choiceOffsetY, choiceOffsetY));
+            choiceButtons[i].transform.localPosition = choiceDefaultPositions[i];
+            choiceButtons[i].transform.localPosition += new Vector3(UnityEngine.Random.Range(-choiceOffsetX, choiceOffsetX), UnityEngine.Random.Range(-choiceOffsetY, choiceOffsetY));
             // Check if the option has a prerequisite
             if (dialogue.choices[i].prerequisite != "")
             {

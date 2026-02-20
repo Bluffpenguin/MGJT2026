@@ -16,5 +16,5 @@ MonoBehaviour:
   text: Good. Now wake up.
   choices: []
   next: {fileID: 0}
-  wordUnlock: 
+  wordUnlock: fakeGo
   transformation: 

@@ -22,7 +22,7 @@ MonoBehaviour:
     choiceText: A <color=red>wheelbarrow</color>.
     prerequisite: wheelbarrow
   - next: {fileID: 11400000, guid: 0c22ba5deba13b549ac6fcecbb001ef2, type: 2}
-    choiceText: A <color=red>malamute<color>.
+    choiceText: A <color=red>malamute</color>.
     prerequisite: malamute
   - next: {fileID: 11400000, guid: f603e3f9874d11b41b1aa599f99d7ebe, type: 2}
     choiceText: A <color=red>shovel</color>.

@@ -15,11 +15,20 @@ MonoBehaviour:
   speakerName: Sheeple
   text: I guess you want to transform again.
   choices:
-  - next: {fileID: 11400000, guid: a0a3753bb7ddf7d41afc703ffa563db0, type: 2}
-    choiceText: Not if I transform!
-    prerequisite: 
+  - next: {fileID: 11400000, guid: 1136b5ed5e7852345b0c395bb65a9373, type: 2}
+    choiceText: <color=Red>Battleaxe</color>
+    prerequisite: battleaxe
+  - next: {fileID: 11400000, guid: 0c22ba5deba13b549ac6fcecbb001ef2, type: 2}
+    choiceText: <color=Red>Malamute</color>
+    prerequisite: malamute
+  - next: {fileID: 11400000, guid: f603e3f9874d11b41b1aa599f99d7ebe, type: 2}
+    choiceText: <color=Red>Shovel</color>
+    prerequisite: shovel
+  - next: {fileID: 11400000, guid: 1f55867e4b15fe5498ef7e3fe6e9b419, type: 2}
+    choiceText: <color=Red>Wheelbarrow</color>!
+    prerequisite: wheelbarrow
   - next: {fileID: 0}
-    choiceText: You're right.
+    choiceText: Nevermind.
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 
