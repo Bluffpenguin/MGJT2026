@@ -3,6 +3,7 @@ using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using static UnityEditorInternal.ReorderableList;
 
 public class Movement : MonoBehaviour
 {
@@ -39,7 +40,14 @@ public class Movement : MonoBehaviour
     [SerializeField] float spriteInterval = 0.5f;
     float elapsedTime = 0;
 
-    private void Awake()
+    [Header("Fly+Apathy Hover")]
+    [SerializeField] float hoverSpeed = 1;
+    [SerializeField] float bobOffset = 5;
+    bool goingUp = false;
+	Vector3 defSpritePosition;
+
+
+	private void Awake()
 	  {
         // Listeners
         EventManager.FreezePlayer.AddListener(freezeMovement);
@@ -59,6 +67,8 @@ public class Movement : MonoBehaviour
         interaction.Enable();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+
+        defSpritePosition = spriteRenderer.transform.localPosition;
     }
 
 	// Update is called once per frame
@@ -181,6 +191,7 @@ public class Movement : MonoBehaviour
     void ApplyTransform()
     {
 		spriteRenderer.transform.localRotation = Quaternion.identity;
+		spriteRenderer.transform.localPosition = defSpritePosition;
         
 		switch (currentForm)
 		{
@@ -268,6 +279,26 @@ public class Movement : MonoBehaviour
 				{
 					spriteRenderer.flipX = true;
 				}
+
+				// Fly Bobbing
+				if (goingUp)
+				{
+					spriteRenderer.transform.localPosition += new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+				else
+				{
+					spriteRenderer.transform.localPosition -= new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+
+				if (spriteRenderer.transform.localPosition.y < defSpritePosition.y - bobOffset)
+				{
+					goingUp = true;
+				}
+				else if (spriteRenderer.transform.localPosition.y > defSpritePosition.y + bobOffset)
+				{
+					goingUp = false;
+				}
+
 				break;
 			case Form.Apathy:
 				if (move.x > 0.1)
@@ -278,6 +309,26 @@ public class Movement : MonoBehaviour
 				{
 					spriteRenderer.flipX = true;
 				}
+
+				// Apathy Bobbing
+				if (goingUp)
+				{
+					spriteRenderer.transform.localPosition += new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+				else
+				{
+					spriteRenderer.transform.localPosition -= new Vector3(0, hoverSpeed * Time.fixedDeltaTime, 0);
+				}
+
+				if (spriteRenderer.transform.localPosition.y < defSpritePosition.y - bobOffset)
+				{
+					goingUp = true;
+				}
+				else if (spriteRenderer.transform.localPosition.y > defSpritePosition.y + bobOffset)
+				{
+					goingUp = false;
+				}
+
 				break;
 			case Form.Frog:
 				if (move.x > 0.1)
