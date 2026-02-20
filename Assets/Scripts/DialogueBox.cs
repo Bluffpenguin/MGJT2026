@@ -12,6 +12,7 @@ public class DialogueBox : MonoBehaviour
 
     [SerializeField] internal Button[] choiceButtons;
     Vector3[] choiceDefaultPositions = new Vector3[5];
+    Vector3 dialogueBoxDefaultPosition;
     [SerializeField] internal TextMeshProUGUI textBox, speakerText;
     [SerializeField] internal GameObject dialoguePanel;
 
@@ -70,7 +71,8 @@ public class DialogueBox : MonoBehaviour
 	void Start()
     {
         textBox.text = string.Empty;
-        defBoxY = dialoguePanel.transform.position.y;
+        dialogueBoxDefaultPosition = dialoguePanel.transform.localPosition;
+        defBoxY = dialoguePanel.transform.localPosition.y;
     }
 
     // Update is called once per frame
@@ -111,18 +113,18 @@ public class DialogueBox : MonoBehaviour
         // Dialogue Box Bobing
         if (goingUp)
         {
-            dialoguePanel.transform.position += new Vector3(0, bobSpeed * Time.deltaTime, 0);
+            dialoguePanel.transform.localPosition += new Vector3(0, bobSpeed * Time.deltaTime, 0);
         }
         else
         {
-            dialoguePanel.transform.position -= new Vector3(0, bobSpeed * Time.deltaTime, 0);
+            dialoguePanel.transform.localPosition -= new Vector3(0, bobSpeed * Time.deltaTime, 0);
         }
 
-        if (dialoguePanel.transform.position.y < defBoxY - bobVariance)
+        if (dialoguePanel.transform.localPosition.y < defBoxY - bobVariance)
         {
             goingUp = true;
         }
-        else if (dialoguePanel.transform.position.y > defBoxY + bobVariance)
+        else if (dialoguePanel.transform.localPosition.y > defBoxY + bobVariance)
         {
             goingUp = false;
         }
@@ -130,6 +132,7 @@ public class DialogueBox : MonoBehaviour
 
     void OpenMenu(Dialogue dialogue)
     {
+        dialoguePanel.transform.localPosition = dialogueBoxDefaultPosition;
         opened = true;
         finishedConversation = false;
 		dialoguePanel.SetActive(true);
