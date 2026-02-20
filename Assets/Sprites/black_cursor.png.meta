@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: f45ab3abd1306df41ac70793a4b2ff06
-=======
-guid: ba06029c7a1414e44b2596118920e3e1
->>>>>>> 45d77047603603690ea1d3466e0b2a8358245f56
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -41,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -76,14 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-<<<<<<< HEAD
     maxTextureSize: 2048
-=======
-    maxTextureSize: 128
->>>>>>> 45d77047603603690ea1d3466e0b2a8358245f56
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +118,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-<<<<<<< HEAD
         width: 43
         height: 64
-=======
-        width: 679
-        height: 1000
->>>>>>> 45d77047603603690ea1d3466e0b2a8358245f56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
