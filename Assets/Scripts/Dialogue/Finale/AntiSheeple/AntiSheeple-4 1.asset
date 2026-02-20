@@ -16,5 +16,5 @@ MonoBehaviour:
   text: Heh... I want to stay too.
   choices: []
   next: {fileID: 0}
-  wordUnlock: 
+  wordUnlock: realStay
   transformation: 

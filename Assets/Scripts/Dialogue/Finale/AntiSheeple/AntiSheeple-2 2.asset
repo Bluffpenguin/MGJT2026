@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Sheeple
   text: I'm a blob! Hard to believe for me, but not for you!
-  choices:
-  - next: {fileID: 11400000, guid: d37f6bbc643aad64dbd1328eb49bdf65, type: 2}
-    choiceText: 
-    prerequisite: 
-  next: {fileID: 0}
+  choices: []
+  next: {fileID: 11400000, guid: d37f6bbc643aad64dbd1328eb49bdf65, type: 2}
   wordUnlock: 
   transformation: 

@@ -19,5 +19,5 @@ MonoBehaviour:
     choiceText: You're so right.
     prerequisite: 
   next: {fileID: 0}
-  wordUnlock: brake
+  wordUnlock: brakes
   transformation: 
