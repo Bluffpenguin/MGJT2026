@@ -52,17 +52,17 @@ public class EndScreens : MonoBehaviour
 		float elapsedTime = 0;
 		while (elapsedTime < 5)
 		{
-			float t = elapsedTime / 5;
 			elapsedTime += Time.deltaTime;
-			c.a = 1 / t;
+			float t = elapsedTime / 5;
+			c.a = 1 * t;
 			fade.color = c;
 			yield return null;
 		}
 		c.a = 1;
 		fade.color = c;
 		fade.enabled = false;
-		yield return new WaitForSeconds(5);
 		selectedCanvas.SetActive(true);
+		yield return new WaitForSeconds(5);
 		SceneManager.LoadScene("MainMenu");
 	}
 }

@@ -1,9 +1,6 @@
 using System.Collections;
-using UnityEditor.Callbacks;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using static UnityEditorInternal.ReorderableList;
 
 public class Movement : MonoBehaviour
 {
@@ -136,7 +133,7 @@ public class Movement : MonoBehaviour
 	void Transform(string newForm)
     {
         transforming = true;
-        rb.linearVelocity.Set(0, 0);
+        rb.linearVelocity = Vector2.zero;
         animator.enabled = false;
         
         switch(newForm)
