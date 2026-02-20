@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: freethinker3-farewell1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: 'KIDS THESE DAYS.
-
-    I GET NO RESPECT.'
+  text: KIDS THESE DAYS. I GET NO RESPECT.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

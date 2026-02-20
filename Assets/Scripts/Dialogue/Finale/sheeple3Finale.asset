@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: sheeple3Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Sheeple
-  text: Imma keep it real with you, this last guy is never gonna listen to you.
+  text: Imma keep it real with you, this last guy is not gonna listen to you.
   choices: []
   next: {fileID: 0}
   wordUnlock: 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: freethinker2Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Hi... I am glad that you didn't die. But this last person... he will never
-    listen to you...
+  text: Hi... I am glad you didn't die. But this last person... he will never listen
+    to you...
   choices: []
   next: {fileID: 0}
   wordUnlock: 

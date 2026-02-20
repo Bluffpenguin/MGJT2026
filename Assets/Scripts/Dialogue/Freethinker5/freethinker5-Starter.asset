@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: freethinker5-Starter
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: I am so far from home... mama is missing to me. I wish to return myself in
-    good country.
+  text: I am far from home... mama is missing to me. I wish to return myself in good
+    country.
   choices:
   - next: {fileID: 11400000, guid: cf022ff568847ae43a2bf17239a5e5b3, type: 2}
-    choiceText: What is your mama like?
+    choiceText: Who's mama?
     prerequisite: 
   - next: {fileID: 11400000, guid: 6c2e1d599e925b349b38ee28ffd64517, type: 2}
     choiceText: Where are you from?

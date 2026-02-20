@@ -13,12 +13,7 @@ MonoBehaviour:
   m_Name: freethinker3-2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: 'IN THIS ECONOMY?
-
-    THIS PLACE IS A RUNAWAY TRAIN, AIN''T GOT NO <color=red>BRAKES</color>.
-
-    YOU
-    HAD BEST GET TO WORK YOURSELF.'
+  text: IN THIS ECONOMY? THIS PLACE IS A RUNAWAY TRAIN, AIN'T GOT NO <color=red>BRAKES</color>.
   choices:
   - next: {fileID: 0}
     choiceText: You're so right.

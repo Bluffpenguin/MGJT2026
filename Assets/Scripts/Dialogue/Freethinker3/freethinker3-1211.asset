@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker3-1211
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: MY WIFE USES A <color=red>HAMMER</color>
+  text: MY WIFE USES A <color=red>HAMMER</color>.
   choices: []
   next: {fileID: 0}
   wordUnlock: hammer

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: freethinker2-end1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: Just to have fun...? Well, shucks. Forgive me for not believing you...
+  text: Just to have fun...? Tch, yeah. Forgive me for not believing you...
   choices: []
   next: {fileID: 0}
   wordUnlock: 

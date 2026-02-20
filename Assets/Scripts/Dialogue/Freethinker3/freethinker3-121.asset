@@ -13,13 +13,10 @@ MonoBehaviour:
   m_Name: freethinker3-121
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   speakerName: Freethinker
-  text: 'GOOD TO SEE SOMEONE WITH COMMON SENSE.
-
-    YOU HIT THE NAIL RIGHT ON THE
-    HEAD.'
+  text: GOOD TO SEE SOMEONE WITH COMMON SENSE. YOU IT RIGHT ON THE HEAD.
   choices:
   - next: {fileID: 11400000, guid: cc2d23e856b563b47a3d5c1e3811bb6a, type: 2}
-    choiceText: What do you hit a nail with?
+    choiceText: Hitting?
     prerequisite: 
   next: {fileID: 0}
   wordUnlock: 

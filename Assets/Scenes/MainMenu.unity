@@ -1999,17 +1999,17 @@ MonoBehaviour:
 
     Malachi - Programming
 
-    Brian - Programming
+    Jonathan - Level Design
 
     Sam
     - Writing & UI
 
     Stephanie - Art
 
-    Jonathan - Audio
+    Brian - Audio
 
     (thanks NullTale
-    for White Scape assets)'
+    for White Scape assets and nojisuma for the background music)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f803ad7e733d8e24d8786535288e98db, type: 2}
   m_sharedMaterial: {fileID: -711241401358874212, guid: f803ad7e733d8e24d8786535288e98db, type: 2}
@@ -2036,8 +2036,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
