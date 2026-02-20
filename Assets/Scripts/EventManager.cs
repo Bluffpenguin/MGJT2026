@@ -9,6 +9,8 @@ static public class EventManager
 
     // Dialogue Choices
     static public UnityEvent<string> Transformation = new();
+    static public UnityEvent FinalePostIntro = new();
+    static public UnityEvent EndFade = new();
 
     // Player Event
     static public UnityEvent FreezePlayer = new();
