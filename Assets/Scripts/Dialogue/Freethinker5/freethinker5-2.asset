@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker5-2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
-  text: I am from the country of vampires. You should to come eat <color=red>sarmale</color>
-    with us. You ate sarmale?
+  speakerName: Blunt Balkan
+  text: I am from the country of vampires. You should to come eat sarmale with us.
+    You ate sarmale?
   choices:
   - next: {fileID: 11400000, guid: 8264701484bf61945bf5e39a90da0af1, type: 2}
     choiceText: What is it?

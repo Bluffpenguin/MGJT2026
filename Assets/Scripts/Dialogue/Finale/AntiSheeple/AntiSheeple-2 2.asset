@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: AntiSheeple-2 2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: The Anti-Sheeple
   text: I'm a blob! Hard to believe for me, but not for you!
   choices: []
   next: {fileID: 11400000, guid: d37f6bbc643aad64dbd1328eb49bdf65, type: 2}

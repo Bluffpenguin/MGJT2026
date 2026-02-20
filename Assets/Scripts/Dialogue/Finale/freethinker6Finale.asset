@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
+  speakerName: Old-timey Knight
   text: Good luck with the final man, friend. He listeneth to no man.
   choices: []
   next: {fileID: 0}

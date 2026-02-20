@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker4-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
+  speakerName: Cantankerous Pirate
   text: Well, tisn't just any cave. Tis the cave where I met me fav'rit pet! An where
     I had ta bury the poor soul...
   choices:

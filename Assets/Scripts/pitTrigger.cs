@@ -9,7 +9,6 @@ public class pitTrigger : MonoBehaviour
 	[SerializeField] float fallRotSpeed = 4;
 	[SerializeField] Transform respawnPoint;
 	[SerializeField] GameObject pitBlocker;
-	bool falling = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 	public void OnTriggerEnter2D(Collider2D other)
@@ -40,7 +39,6 @@ public class pitTrigger : MonoBehaviour
 	IEnumerator FallIntoPit()
 	{
 		pitBlocker.SetActive(true);
-		falling = true;
 		EventManager.FreezePlayer.Invoke();
 
 		Vector3 startScale = player.transform.localScale;
@@ -63,7 +61,7 @@ public class pitTrigger : MonoBehaviour
 		player.transform.position = respawnPoint.position;
 		player.transform.rotation = Quaternion.identity;
 		player.transform.localScale = startScale;
-		falling = false;
+
 		pitBlocker.SetActive(false);
 
 		EventManager.UnfreezePlayer.Invoke();

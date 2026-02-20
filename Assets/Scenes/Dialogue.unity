@@ -39587,15 +39587,15 @@ MonoBehaviour:
   - {fileID: -7603432100933935914, guid: 02295e766f659ce4793c7054be290a35, type: 3}
   shineVFXPrefab: {fileID: 7938384439400024403, guid: b6e54acc881a03c4a9719b161a25a3e3, type: 3}
   shineVFXTransform: {fileID: 0}
-  startingScale: 0
   finalScale: 0.4
   transformTime: 0.75
-  hamRotSpeedX: 3
-  hamRotSpeedZ: 3
+  transformSFX: {fileID: 8300000, guid: 3857ae6843d462647aa7976ab851fe36, type: 3}
   altAxeSprite: {fileID: -4236964960918022115, guid: 0818a5b55f436b94bbe69a64fcabd40f, type: 3}
   spriteInterval: 0.5
   hoverSpeed: 0.25
-  bobOffset: 0.3
+  bobOffsetY: 0.3
+  bobOffsetX: 0.25
+  bounceSpeed: 3
 --- !u!4 &829487521
 Transform:
   m_ObjectHideFlags: 0

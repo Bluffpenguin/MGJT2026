@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple1-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: A gullible person
   text: Really? What can you transform into?
   choices:
   - next: {fileID: 11400000, guid: a9a4b5b7ae8d7ee41be81535356d8141, type: 2}

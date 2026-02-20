@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple2-Encore
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: A once skeptic person
   text: Sure, I believe you can transform again.
   choices:
   - next: {fileID: 11400000, guid: cc50a27c4ccd3f341a2fa7c9a9b0e896, type: 2}

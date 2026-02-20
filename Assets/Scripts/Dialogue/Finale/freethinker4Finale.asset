@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker4Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
+  speakerName: Cantankerous Pirate
   text: Ahoy! I was glad t'ave the pleasure o conversin wit ye. Fair winds for that
     last man, boy.
   choices: []

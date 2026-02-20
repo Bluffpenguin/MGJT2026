@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: sheeple3Finale
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: A once pretty convinced person
   text: Imma keep it real with you, this last guy is not gonna listen to you.
   choices: []
   next: {fileID: 0}

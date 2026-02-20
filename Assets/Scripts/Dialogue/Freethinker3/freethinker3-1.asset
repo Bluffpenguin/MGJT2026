@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker3-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
+  speakerName: Stressed Worker
   text: ISN'T IT OBVIOUS? I'M DOING WHAT EVERYONE ELSE IS TOO SCARED TO DO.
   choices:
   - next: {fileID: 11400000, guid: e57a74207c2d766468e77c616c56492a, type: 2}

@@ -53,8 +53,9 @@ public class HoleTrigger : MonoBehaviour
 
 	void Dig()
 	{
-		// Temp
+		
 		StartCoroutine(DigTransitionFromSelf());
+		StartCoroutine(DiggingSound());
 	}
 
 	IEnumerator DigTransitionFromSelf()
@@ -141,7 +142,7 @@ public class HoleTrigger : MonoBehaviour
 	{
 		float elapsedTime = 0;
 		float sfxSpacing = 0;
-		while (elapsedTime < transitionTime*8)
+		while (elapsedTime < transitionTime*4)
 		{
 			elapsedTime += Time.deltaTime;
 			sfxSpacing += Time.fixedDeltaTime;

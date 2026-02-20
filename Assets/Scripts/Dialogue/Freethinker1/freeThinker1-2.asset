@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freeThinker1-2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: 
+  speakerName: Cheerful Gardener
   text: You should try! I've grown so many, they're starting to rot... it's attracting
-    <color=red>flies</color
+    <color=red>flies</color>
   choices:
-  - next: {fileID: 11400000, guid: 8238da6206224d3489ad951fe8ad4ed4, type: 2}
+  - next: {fileID: 11400000, guid: a75e0a1bdab4b4145bc09157f048a410, type: 2}
     choiceText: Flying?
     prerequisite: 
   - next: {fileID: 0}

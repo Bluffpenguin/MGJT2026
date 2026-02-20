@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker2-2-1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: 
+  speakerName: Depressed Nihilist
   text: Breaking...? Most connections are broken by sheer <color=red>apathy</color>...
     It's that simple, dude.
   choices: []

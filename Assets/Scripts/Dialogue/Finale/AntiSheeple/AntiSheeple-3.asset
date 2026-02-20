@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: AntiSheeple-3
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Sheeple
+  speakerName: The Anti-Sheeple
   text: Seriously. What else do you believe? Do you know if this world is real? How
     do you know you're not in a simulation?
   choices:

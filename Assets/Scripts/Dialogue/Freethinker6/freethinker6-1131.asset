@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5006d3582809b524899a7d63b02a484a, type: 3}
   m_Name: freethinker6-1131
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  speakerName: Freethinker
+  speakerName: Old-timey Knight
   text: Life may be dull, but there are moments of beauty hidden all about for those
     that have eyes to see. I seek such beauty.
   choices:
