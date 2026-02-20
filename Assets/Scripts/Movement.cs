@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     // Transformations
     public enum Form
     {
-        Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane, Hammer
+        Man, Shovel, Brakes, Fly, Apathy, Frog, Airplane, Hammer, Malamute, Wheelbarrow, Battleaxe, Sarmale, Potatoe
     }
     [SerializeField] public Form currentForm = Form.Man;
     [SerializeField] bool transforming = false;
@@ -33,6 +33,11 @@ public class Movement : MonoBehaviour
     [Header("Hammer Movement")]
     [SerializeField] float hamRotSpeedX=2, hamRotSpeedZ=2;
 
+    [Header("Battleaxe Movement")]
+    [SerializeField] Sprite altAxeSprite;
+    [SerializeField] float spriteInterval = 0.5f;
+    float elapsedTime = 0;
+
     private void Awake()
 	  {
         // Listeners
@@ -43,7 +48,7 @@ public class Movement : MonoBehaviour
         EventManager.HidePlayer.AddListener(HidePlayer);
 
         // Components
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	  }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -90,9 +95,7 @@ public class Movement : MonoBehaviour
         
         Vector2 move = MoveAction.ReadValue<Vector2>();
         rb.linearVelocity = move * speed;
-        animator.SetBool("IsWalking", true);
-        animator.SetFloat("InputX", move.x);
-        animator.SetFloat("InputY", move.y);
+        
         FormMovemenUpdate(move);
 
     }
@@ -100,7 +103,7 @@ public class Movement : MonoBehaviour
     void freezeMovement()
     {
         canMove = false;
-		rb.linearVelocity.Set(0, 0);
+        rb.linearVelocity = Vector2.zero;
 	}
 
 	void unfreezeMovement()
@@ -114,6 +117,7 @@ public class Movement : MonoBehaviour
     {
         transforming = true;
         rb.linearVelocity.Set(0, 0);
+        animator.enabled = false;
         
         switch(newForm)
         {
@@ -142,6 +146,21 @@ public class Movement : MonoBehaviour
             case "hammer":
                 currentForm = Form.Hammer;
                 break;
+            case "wheelbarrow":
+                currentForm = Form.Wheelbarrow;
+                break;
+            case "battleaxe":
+                currentForm = Form.Battleaxe;
+                break;
+            case "malamute":
+                currentForm = Form.Malamute;
+                break;
+            case "sarmale":
+                currentForm = Form.Sarmale;
+                break;
+            case "potatoe":
+                currentForm = Form.Potatoe;
+                break;
             default: 
                 break;
         }
@@ -152,10 +171,12 @@ public class Movement : MonoBehaviour
     void ApplyTransform()
     {
 		spriteRenderer.transform.localRotation = Quaternion.identity;
+        
 		switch (currentForm)
 		{
 			case Form.Man:
                 spriteRenderer.sprite = transformSprites[0];
+                animator.enabled = true;
 				break;
 			case Form.Shovel:
                 spriteRenderer.sprite = transformSprites[1];
@@ -178,6 +199,22 @@ public class Movement : MonoBehaviour
             case Form.Hammer:
 				spriteRenderer.sprite = transformSprites[7];
 				break;
+            case Form.Malamute:
+                spriteRenderer.sprite = transformSprites[8];
+                break;
+            case Form.Wheelbarrow:
+                spriteRenderer.sprite = transformSprites[9];
+                break;
+            case Form.Battleaxe:
+                spriteRenderer.sprite = transformSprites[10];
+                elapsedTime = 0;
+                break;
+            case Form.Sarmale:
+                spriteRenderer.sprite = transformSprites[11];
+                break;
+            case Form.Potatoe:
+                spriteRenderer.sprite = transformSprites[12];
+                break;
             default:
                 break;
 		}
@@ -188,7 +225,9 @@ public class Movement : MonoBehaviour
 		switch (currentForm)
 		{
 			case Form.Man:
-				
+				animator.SetBool("IsWalking", true);
+				animator.SetFloat("InputX", move.x);
+				animator.SetFloat("InputY", move.y);
 				break;
 			case Form.Shovel:
 				
@@ -226,6 +265,34 @@ public class Movement : MonoBehaviour
 				{
 					spriteRenderer.transform.Rotate(Vector3.left, -hamRotSpeedX, Space.Self);
 				}
+				break;
+			case Form.Malamute:
+		
+				break;
+			case Form.Wheelbarrow:
+				
+				break;
+			case Form.Battleaxe:
+                if (!transforming)
+                {
+                    elapsedTime += Time.fixedDeltaTime;
+                    if (elapsedTime > spriteInterval && spriteRenderer.sprite == transformSprites[10])
+                    {
+                        spriteRenderer.sprite = altAxeSprite;
+                        elapsedTime = 0;
+                    }
+                    else if (elapsedTime > spriteInterval)
+                    {
+                        spriteRenderer.sprite = transformSprites[10];
+                        elapsedTime = 0;
+                    }
+                }
+				
+				break;
+			case Form.Sarmale:
+				
+				break;
+            case Form.Potatoe:
 				break;
 			default:
 				break;

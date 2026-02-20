@@ -16,6 +16,6 @@ MonoBehaviour:
   text: The babbling of the brook, the glimmering sheen of a well-polished pauldron,
     or the flickering of a torch casting shadows upon a wall...
   choices: []
-  next: {fileID: 0}
+  next: {fileID: 11400000, guid: 2373bf07abd2cc34191847d5884f2615, type: 2}
   wordUnlock: 
   transformation: 
