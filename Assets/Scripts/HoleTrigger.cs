@@ -7,7 +7,7 @@ public class HoleTrigger : MonoBehaviour
 	bool playerInRange = false;
 	GameObject player;
 	[SerializeField] GameObject prompt;
-	[SerializeField] AudioClip failSFX;
+	[SerializeField] AudioClip failSFX, digSFX;
 	[SerializeField] Transform digVFXTransform;
 	[SerializeField] Transform siblingHole;
 	[SerializeField] float transitionTime = 1;
@@ -135,5 +135,22 @@ public class HoleTrigger : MonoBehaviour
 		Debug.Log("finished transform");
 		digVFXTransform.gameObject.SetActive(false);
 		EventManager.UnfreezePlayer.Invoke();
+	}
+
+	IEnumerator DiggingSound()
+	{
+		float elapsedTime = 0;
+		float sfxSpacing = 0;
+		while (elapsedTime < transitionTime*8)
+		{
+			elapsedTime += Time.deltaTime;
+			sfxSpacing += Time.fixedDeltaTime;
+			if (sfxSpacing >= transitionTime)
+			{
+				sfxSpacing = 0;
+				AudioManager.instance.UI_One_Shot(digSFX, 1);
+			}
+			yield return null;
+		}
 	}
 }

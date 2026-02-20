@@ -37833,6 +37833,10 @@ PrefabInstance:
       value: DirtHoleEnd
       objectReference: {fileID: 0}
     - target: {fileID: 3185421958633715300, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
+      propertyPath: digSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0df4a490156b7c54b8e2d40ce7891d0e, type: 3}
+    - target: {fileID: 3185421958633715300, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
       propertyPath: siblingHole
       value: 
       objectReference: {fileID: 1950438246}
@@ -39196,7 +39200,7 @@ GameObject:
   - component: {fileID: 749271570}
   - component: {fileID: 749271569}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39216,9 +39220,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -61977,6 +61981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   prompt: {fileID: 178860001}
   failSFX: {fileID: 8300000, guid: 9b9fef884d0fa084e99f2874dd7bd658, type: 3}
+  breakSFX: {fileID: 8300000, guid: 826db362b0deab144bf434f682e173d0, type: 3}
   rockSprites:
   - {fileID: 1218229334}
   - {fileID: 1054688117}
@@ -63637,6 +63642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DirtHole
       objectReference: {fileID: 0}
+    - target: {fileID: 3185421958633715300, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
+      propertyPath: digSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0df4a490156b7c54b8e2d40ce7891d0e, type: 3}
     - target: {fileID: 3185421958633715300, guid: 7f7cbaf65945c654aafbf522a4de1a16, type: 3}
       propertyPath: siblingHole
       value: 
