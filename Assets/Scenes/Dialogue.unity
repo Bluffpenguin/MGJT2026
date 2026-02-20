@@ -40298,7 +40298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 980300307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 860000267}
+        m_TargetAssemblyTypeName: SceneChange2, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &980300307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40556,7 +40568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1004696529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 860000267}
+        m_TargetAssemblyTypeName: SceneChange2, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1004696529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41125,7 +41149,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1075277326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 860000267}
+        m_TargetAssemblyTypeName: SceneChange2, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1075277326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60726,7 +60762,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1409489000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 860000267}
+        m_TargetAssemblyTypeName: SceneChange2, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1409489000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61200,7 +61248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You get to hang out with funny people in your mind. Enjoy!
+  m_text: You get to hang out with funny people in your mind forever. Enjoy!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f803ad7e733d8e24d8786535288e98db, type: 2}
   m_sharedMaterial: {fileID: -711241401358874212, guid: f803ad7e733d8e24d8786535288e98db, type: 2}
